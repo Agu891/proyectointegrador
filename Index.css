@@ -4,7 +4,7 @@
 
 :root{
     --fontfamily: 'Montserrat', sans-serif;
-    --margingral: 5px;
+    --margingral: 15px;
     --fontfamily2: 'Permanent Marker', cursive;
 }
 
@@ -41,7 +41,7 @@
 .boximg img{
     display: flex;
  width: 100%;
- max-width: 200px;
+ max-width: 300px;
  min-width: 100px;
  max-height: 200px;
  min-height: 75px;
@@ -350,6 +350,54 @@ footer {
 
 
 @media screen and (min-width: 1024px) {
+    
+
+    .navbar{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+
+    }
+    .navbox{
+        width: 100%;
+        max-width: 1000px;
+        
+    }
+
+    #menuToggle{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        position:static;
+        
+     
+        
+    }
+
+    #menuToggle span {
+        display: none;
+    }
+    #menu{
+        display: flex;
+        background: none;
+        justify-content: space-between;
+        align-items: center;
+        transition: none;
+        transform: none;
+        height: 100%;
+        position: static;
+        width: 100%;
+        max-width: 80%;
+        
+        
+    }
+        #menu .menu__item{
+            display: flex;
+            font-size: 1rem;
+           
+        } 
+
 
     .boxgralseccion2 {
             display: flex;
@@ -363,5 +411,29 @@ footer {
             height: 25vh;
             max-width: 300px
         }
-    
+
+
+        .boxtitulo{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .boxtitulo h1 {
+            
+            font-size: 4rem;
+            padding-left:  0px 0px;
+            border-left: 10px  solid aqua;
+        } 
+
+        .boxtitulo p {
+            font-size: 2.5rem;
+        }
+    .seccionbox h2{
+        text-align: center;
+        align-self: center;
+        width: 50%;
+        font-size: 2rem;
+    }
 }
