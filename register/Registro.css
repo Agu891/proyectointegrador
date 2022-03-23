@@ -15,8 +15,170 @@ body{
     background-image: url(./img/nuevo\ fondo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+   
 
 }
+
+.navbar {
+    background: rgb(0,83,99);
+    background: linear-gradient(0deg, rgba(0,83,99,1) 9%, rgba(0,212,255,1) 100%, rgba(0,83,99,1) 100%);
+   display:flex ;
+   justify-content:space-between;
+   align-items: center;
+    height: 10vh;
+    min-height: 80px;
+
+}
+.navbox {
+    width: 100%;
+    height: 100% ;
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+.boximg {
+ display: flex;
+ 
+}
+
+.boximg img{
+    display: flex;
+ width: 100%;
+ max-width: 300px;
+ min-width: 100px;
+ max-height: 200px;
+ min-height: 75px;
+ 
+ 
+
+}
+
+
+#menuToggle{
+    display: block;
+    position: relative;
+    top: 10px;                                      /* probar otros valores*/
+    left: 15px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+    z-index: 2;
+    
+  
+}
+#menuToggle a {
+    
+        text-decoration: none;
+        color: #000000;
+        transition: color 0.3s ease;
+        
+      
+
+}
+#menuToggle a:hover
+{
+color: tomato;
+}
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 5vh;
+    position: absolute;
+    top: -7px;
+    left:-5px;
+
+    cursor:pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+
+}
+
+#menuToggle span {  
+    display: block;
+    width: 40px;
+    height: 5px ;
+    margin-top: 0.7vh;     /* Ver si lo puedo hacer con una  IMG */
+    position: relative;
+    
+    background: #cdcdcd;
+    border-radius: 3px;
+    
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #df1111;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+    {
+      position: absolute;
+      width:50vw;
+      max-width: 300px ;
+      margin: -100px 0 0 -50px;
+      padding-left: 50px;
+      padding-right: 30px;
+      padding-bottom: 15px;
+      padding-top: 125px;
+     border-radius: 15px;
+     background: rgb(0,83,99);
+     background: linear-gradient(0deg, rgba(0,83,99,1) 9%, rgba(0,212,255,1) 100%, rgba(0,83,99,1) 100%);
+      list-style-type: none;
+      -webkit-font-smoothing: antialiased; 
+      transform-origin: 0% 0%;
+      transform: translate(-100%, 0);      
+      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+      
+}
+
+#menu li
+{
+     padding: 10px 0;
+     font-size: 1rem;
+     font-family: var(--fontfamily);
+     font-weight: 600;
+     border-bottom: 2px solid rgba(0, 0, 255, 0.164);
+      
+
+     
+}
+#menuToggle input:checked ~ ul
+{
+    transform: none;
+
+}
+
+
 .boxgral{
     display: flex;
     height: 100%;
@@ -43,6 +205,7 @@ position: relative;
 background-color: rgba(190, 190, 190, 0.712);
 text-align: center;
 padding: var(--padding-x);
+margin-top: 15px;
 
 
 }
@@ -124,3 +287,52 @@ padding: var(--padding-x);
     color: tomato;
 
 }
+
+@media screen and (min-width: 1024px) {
+    
+
+    .navbar{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+
+    }
+    .navbox{
+        width: 100%;
+        max-width: 1000px;
+        
+    }
+
+    #menuToggle{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        position:static;
+        
+     
+        
+    }
+
+    #menuToggle span {
+        display: none;
+    }
+    #menu{
+        display: flex;
+        background: none;
+        justify-content: space-between;
+        align-items: center;
+        transition: none;
+        transform: none;
+        height: 100%;
+        position: static;
+        width: 100%;
+        max-width: 80%;
+        
+        
+    }
+        #menu .menu__item{
+            display: flex;
+            font-size: 2rem;
+           
+        } 
