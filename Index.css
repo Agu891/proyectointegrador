@@ -408,8 +408,9 @@ footer {
 
         .box1seccion2{
             width: 25%;
-            height: 25vh;
-            max-width: 300px
+            height: 30vh;
+            max-width: 300px;
+            margin: 20px 0px;
         }
 
 
