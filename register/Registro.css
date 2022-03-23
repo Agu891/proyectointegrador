@@ -1,0 +1,126 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Hurricane&family=Lobster&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root{
+    --padding-x : 30px
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     font-family: 'Montserrat', sans-serif;
+}
+body{
+    background-image: url(./img/nuevo\ fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.boxgral{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxgral .boxregistro{
+    display: flex;
+    width: 20vw;
+    height: 80vh;
+    border: 1px solid rgba(0, 47, 255, 0.226);
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-width: 300px ;
+    max-width: 20vw;
+    min-height: 700px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+position: relative;
+background-color: rgba(190, 190, 190, 0.712);
+text-align: center;
+padding: var(--padding-x);
+
+
+}
+
+.boxgral .boxregistro h1{
+    margin-bottom: 15px;
+    
+}
+.boxgral .boxregistro .boxes-input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    font-weight: 500;
+
+    
+}
+
+
+.boxgral .boxregistro .sexo{
+    overflow:inherit;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    justify-content: center;
+   
+}
+
+.boxgral .boxregistro .checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 15px;
+}
+.boxgral .boxregistro input{
+    height: 3.5vh;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+    padding-left: 10px;
+}
+.boxgral .boxregistro input:focus{
+    background-color: rgb(196, 196, 218);
+}
+
+.botonregistro{
+    height: 100%;
+    margin-top: 5px;
+}
+.botonregistro button{
+    width: 50%;
+    height: 80%;
+    border-radius: 15px;
+    border: none;
+    font-weight: 500;
+    margin-top: 5px;
+    transition-duration: 0.3s;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.botonregistro button:hover{
+    background-color: tomato;
+    cursor: pointer;
+
+}
+
+.boxregistro a{
+    padding-top: 15px;
+    text-decoration:none;
+    font-family: font-family: 'Montserrat', sans-serif;;
+    font-size : 1.5rem;
+    font-weight: 500;
+    color: darkblue;
+    transition-duration: 0.3s;
+}
+ .boxregistro a:hover {
+    color: tomato;
+
+}
