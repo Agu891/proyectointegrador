@@ -232,17 +232,20 @@ color: tomato;
      font-family: var(--fontfamily1);
      
  }
-
-.seccionbox{
+ .boxseccion2 {
     background: rgb(231,2,2);
     background: radial-gradient(circle, rgba(231,2,2,1) 0%, rgba(218,63,63,1) 99%);
+ }
+
+.seccionbox{
+
     padding-top: 15px;
     display: flex;
     flex-direction: column;
  
 }
 
-.seccionbox h2{
+ h2{
     font-family: var(--fontfamily2);
     text-align: center;
     margin: 0px 0px;
@@ -294,7 +297,11 @@ color: tomato;
     flex-wrap: wrap;
 
 }
-
+.boxcontacto{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
 .boxcontacto p {
     font-size: 1rem;
     font-weight: 700;
@@ -306,22 +313,17 @@ color: tomato;
     margin-right: 15px;
 }
 .sectionContacto{
-    background: rgb(28,2,231);
-background: linear-gradient(167deg, rgba(28,2,231,1) 0%, rgba(188,63,218,1) 99%);
-}
-.sectionContacto h2{
-    font-family: var(--fontfamily2);
-    margin: var(--margingral);
-    margin-top: 0px;
-    color: #000000;
     
-
+    border-bottom: 2px solid aqua;
+    display: flex;
+    flex-direction: column ;
 }
+
 .boxgralfooter{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #fafafa;
+  
 }
 .redes {
     display: flex;
@@ -330,7 +332,7 @@ background: linear-gradient(167deg, rgba(28,2,231,1) 0%, rgba(188,63,218,1) 99%)
    width: 100%;
 }
 .redes a img {
-    max-width: 50px;
+    max-width: 25px;
 }
 
 .redes a {
@@ -340,13 +342,11 @@ background: linear-gradient(167deg, rgba(28,2,231,1) 0%, rgba(188,63,218,1) 99%)
 .parraforedes p {
     font-family: var(--fontfamily1);
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-align: center;
 }
 
-footer {
-    margin: 20px;
-}
+
 
 
 @media screen and (min-width: 1024px) {
@@ -436,5 +436,14 @@ footer {
         align-self: center;
         width: 50%;
         font-size: 2rem;
+    }
+    .sectionContacto h2 {
+        align-self: center;
+        width: 50%;
+        font-size: 2rem;
+    }
+    .boxcontacto {
+        flex-direction: row;
+        margin: var(--margingral);
     }
 }
