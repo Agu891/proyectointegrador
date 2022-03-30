@@ -344,6 +344,7 @@ color: tomato;
     font-weight: 600;
     font-size: 1rem;
     text-align: center;
+    color: black;
 }
 
 
@@ -445,5 +446,8 @@ color: tomato;
     .boxcontacto {
         flex-direction: row;
         margin: var(--margingral);
+    }
+    .redes a img {
+        max-width: 50px;
     }
 }
