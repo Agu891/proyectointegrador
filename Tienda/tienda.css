@@ -72,8 +72,9 @@ body{
     
 }
 
-#total ul li{
+#total ul{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color:white;
@@ -89,26 +90,39 @@ body{
    font-weight: 600;
    font-size: 1rem;
 }
-
+#total ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 250ms;
+    transform: scaleY(0);
+}
+#total ul li.animate {
+    transform: scaleY(1);
+}
 #imagenCarrito {
     display: flex;
     width: 20%;
+    max-width: 200px;
     justify-self: center;
     align-self: center;
 
 }
 
-#total ul li.animate {
+#total ul.animate {
     
      transform: scaleY(1) ;
    
 }
 #total p{
-    background-color: white;
+    background: rgb(0,83,99);
+    background: linear-gradient(0deg, rgba(0,83,99,1) 9%, rgba(0,212,255,1) 100%, rgba(0,83,99,1) 100%);
     text-align: center;
+    min-height: 20px;
+    font-size: 1.5rem;
     transform: scaleY(0); 
    transform-origin: top;
-   transition: 1000ms;
+   transition: 100ms;
    font-family: var(--fontfamily);
    font-weight: 600;
 }
@@ -119,7 +133,7 @@ body{
 
 #productosGrid{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
     grid-template-rows: 1fr;
     gap: 1rem;
     padding: 0 15px;

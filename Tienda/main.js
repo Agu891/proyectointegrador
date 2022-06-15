@@ -31,15 +31,17 @@ function addToCart (precio,nombre , img) {
             ul.appendChild(liNombre)
            
             liNombre.innerHTML = productos[i].nombre + `<img id= "imagenCarrito" src ="${productos[i].img}">` + "$" + productos[i].precio 
-            setTimeout(()=> liNombre.classList.add("animate"), i*500) 
-                     
+            setTimeout(()=> ul.classList.add("animate"), i*500)
+            setTimeout(()=> liNombre.classList.add("animate"), i* 500)  
+                    
         }
         const precioFinal = document.createElement('p')
         total.appendChild(precioFinal)
         precioFinal.innerHTML =`TOTAL: $${sumaTotal}` 
-        setTimeout(()=> precioFinal.classList.add("animate"), 500)
-        console.log(sumaTotal)
+        setTimeout(()=> precioFinal.classList.add("animate"), 0)
         
+        console.log(sumaTotal)
+        ul.classList.remove("animate")
        } 
    function unsee() {
     ul.innerHTML = ""
