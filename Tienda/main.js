@@ -9,18 +9,18 @@ const ul = document.createElement('ul')
 
 
 
-
 function addToCart (precio,nombre , img, count) {
     productos.push({precio: precio , nombre: nombre , img : img , count: count})
     span.innerHTML = productos.length
     shoppingCart.appendChild(span)
     span.style.position = "absolute"
     console.log(productos)
+
     
 }
 
   function seeShoppingCart() {
- 
+    
     function see() {
         total.appendChild(ul)
         let sumaTotal = 0
@@ -59,6 +59,5 @@ function addToCart (precio,nombre , img, count) {
 
 
 }
-
 
 
