@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Pc Maker</title>
+    <link rel="stylesheet" href="./tienda.css">
+</head>
+<body>
+    <nav id="navbarTienda">
+        <span  > <a href="/index.html" >Volver al inicio</a></span>
+        <span id="shoppingCart"><img onclick="seeShoppingCart()" src="./img/cart-shopping-solid.svg" alt="carrito de compras"></span>
+    </nav>
+    <div id="total"></div>
+    <h2>Tarjetas de video</h2>
+    <div id="productosGrid">
+       
+        <div id="productos">
+             <div><img src="./img/Tarjetas de video/rtx 3090.jpg" alt=""></div>
+             <span>Gigabyte RTX 3090</span>
+             <span> 400.000$ </span>
+             <button onclick="addToCart(400000, 'Gigabyte RTX 3090')">Agregar al carrito</button>
+        </div>
+        <div id="productos">
+         <div><img src="./img/Tarjetas de video/rtx 3080ti.jpg" alt=""></div>
+            <span>Suprim RTX 3080ti</span>
+            <span>350.000$ </span>
+            <button onclick="addToCart(350000, 'RTX 3080ti')">Agregar al carrito</button>
+         </div>
+         <div id="productos">
+             <div><img src="./img/Tarjetas de video/rtx 3080.jpg" alt=""></div>
+             <span>GameRock RTX 3080</span>
+             <span>300.000$ </span>
+             <button onclick="addToCart(300000, 'rtx 3080')">Agregar al carrito</button>
+         </div>
+         <div id="productos">
+             <div><img src="./img/Tarjetas de video/rx6900 xt.jpg" alt=""></div>
+             <span>Asus Rx 6900 xt</span>
+             <span>300.000$ </span>
+             <button onclick="addToCart(300000, 'rx6900 xt')">Agregar al carrito</button>
+        </div>
+        <div id="productos">
+             <div><img src="./img/Tarjetas de video/rx 6700 xt.jpg" alt=""></div>
+             <span>Gigabyte RX 6700 xt</span>
+             <span>250.000$</span>
+             <button  onclick="addToCart(250000 , 'RX 6700 xt')">Agregar al carrito</button>
+         </div>
+
+    </div>
+    <h2>Memorias RAM</h2>
+    <div id="productosGrid">
+       
+        <div id="productos">
+             <div><img src="./img/RAMs/Corsair Vengeance lfx.jpg" alt=""></div>
+             <span>Corsair Vengeance LFX 2x8gb</span>
+             <span>12.000$ </span>
+             <button onclick="addToCart(12000,'Corsair Vengeance LFX 2x8gb')">Agregar al carrito</button>
+        </div>
+        <div id="productos">
+         <div><img src="./img/RAMs/Gskill trident z RGB.jpg" alt=""></div>
+            <span>Gskill trident z RGB 2x8gb</span>
+            <span>13.000$ </span>
+            <button onclick="addToCart(13000, 'Gskill trident z RGB 2x8gb')">Agregar al carrito</button>
+         </div>
+         <div id="productos">
+             <div><img src="./img/RAMs/Gskill trident z royal.jpg" alt=""></div>
+             <span>Gskill trident z royal 2x8gb</span>
+             <span>25.000$</span>
+             <button onclick="addToCart(25000,'Gskill trident z royal 2x8gb')">Agregar al carrito</button>
+         </div>
+         <div id="productos">
+             <div><img src="./img/RAMs/Hyperx Fury 8gb.jpg" alt=""></div>
+             <span>Hyperx fury 8gb</span>
+             <span>7.000$ </span>
+             <button onclick="addToCart(7000,'Hyperx fury 8gb')">Agregar al carrito</button>
+        </div>
+        <div id="productos">
+             <div><img src="./img/RAMs/Patriot viper Rgb.jpg" alt=""></div>
+             <span>Patriot Viper RGB 8gb</span>
+             <span>6.000$ </span>
+             <button onclick="addToCart(6000,'Patriot Viper RGB 8gb')">Agregar al carrito</button>
+         </div>
+
+    </div>
+    <h2>Procesadores</h2>
+    <div id="productosGrid">
+       
+        <div id="productos">
+             <div><img src="./img/Microprocesadores/Intel i9 11900k.jpg" alt=""></div>
+             <span>Intel i9 11900k</span>
+             <span> 190.000$ </span>
+             <button onclick="addToCart(190000,'Intel i9 11900k' )">Agregar al carrito</button>
+        </div>
+        <div id="productos">
+         <div><img src="./img/Microprocesadores/Intel i9 11700.jpg" alt=""></div>
+            <span>Intel i9 11700</span>
+            <span>120.000$</span>
+            <button onclick="addToCart(120000,'Intel i9 11700')">Agregar al carrito</button>
+         </div>
+         <div id="productos">
+             <div><img src="./img/Microprocesadores/AMD Ryzen 9 5950x.jpg" alt=""></div>
+             <span>AMD Ryzen 9 5950x</span>
+             <span>150.000$ </span>
+             <button onclick="addToCart(150000,'AMD Ryzen 9 5950x')" >Agregar al carrito</button>
+         </div>
+         <div id="productos">
+             <div><img src="./img/Microprocesadores/AMD Ryzen 7 5800x.jpg" alt=""></div>
+             <span>AMD Ryzen 7 5800x</span>
+             <span>100.000$ </span>
+             <button onclick="addToCart(100000,'AMD Ryzen 7 5800x')">Agregar al carrito</button>
+        </div>
+        <div id="productos">
+             <div><img src="./img/Microprocesadores/AMD Ryzen 7 3700x.jpg" alt=""></div>
+             <span>AMD Ryzen 7 3700x</span>
+             <span>70.000$ </span>
+             <button onclick="addToCart(70000,'AMD Ryzen 7 3700x')">Agregar al carrito</button>
+         </div>
+
+    </div>
+    <h2>Motherboards</h2>
+    <div id="productosGrid">
+       
+        <div id="productos">
+             <div><img src="./img/Mothers/ASUS crosshair dark hero VIII.jpg" alt=""></div>
+             <span>ASUS crosshair dark hero VIII</span>
+             <span>90.000$ </span>
+             <button onclick="addToCart(90000,'ASUS crosshair dark hero VIII')">Agregar al carrito</button>
+        </div>
+        <div id="productos">
+         <div><img src="./img/Mothers/ASUS TUF gaming b450.jpg" alt=""></div>
+            <span>ASUS TUF gaming b450</span>
+            <span>60.000$ </span>
+            <button onclick="addToCart(60000,'ASUS TUF gaming b450')">Agregar al carrito</button>
+         </div>
+         <div id="productos">
+             <div><img src="./img/Mothers/Gigabyte Aorus z690 elite.jpg" alt=""></div>
+             <span>Gigabyte Aorus z690 elite</span>
+             <span>80.000$ </span>
+             <button onclick="addToCart(80000,'Gigabyte Aorus z690 elite')">Agregar al carrito</button>
+         </div>
+         <div id="productos">
+             <div><img src="./img/Mothers/Gigabyte b660m gaming x.jpg" alt=""></div>
+             <span>Gigabyte b660m gaming x</span>
+             <span>75.000$ </span>
+             <button onclick="addToCart(75000,'Gigabyte b660m gaming x')">Agregar al carrito</button>
+        </div>
+        <div id="productos">
+             <div><img src="./img/Mothers/MSI x570 .jpg" alt=""></div>
+             <span>MSI x570</span>
+             <span>50.000$ </span>
+             <button onclick="addToCart(50000,'MSI x570')">Agregar al carrito</button>
+         </div>
+         
+
+    </div>
+    <h2>Fuentes</h2>
+    <div id="productosGrid">
+       
+        <div id="productos">
+             <div><img src="./img/Fuentes/ASUS TUF gaming 750w.jpg" alt=""></div>
+             <span>ASUS TUF gaming 750w</span>
+             <span>40.000$ </span>
+             <button onclick="addToCart(40000,'ASUS TUF gaming 750w')"> Agregar al carrito</button>
+        </div>
+        <div id="productos">
+         <div><img src="./img/Fuentes/Corsair Tx 850w.jpg" alt=""></div>
+            <span>Corsair Tx 850w</span>
+            <span>38.000$ </span>
+            <button onclick="addToCart(38000,'Corsair Tx 850w')">Agregar al carrito</button>
+         </div>
+         <div id="productos">
+             <div><img src="./img/Fuentes/Deepcool da500w.jpg" alt=""></div>
+             <span>Deepcool da500w</span>
+             <span>30.000 </span>
+             <button onclick="addToCart(30000,'Deepcool da500w')">Agregar al carrito</button>
+         </div>
+         <div id="productos">
+             <div><img src="./img/Fuentes/EVGA 850w gq 80 plus.jpg" alt=""></div>
+             <span>EVGA 850w gq 80 plus</span>
+             <span>50.000$ </span>
+             <button onclick="addToCart(50000,'EVGA 850w gq 80 plus')">Agregar al carrito</button>
+        </div>
+        <div id="productos">
+             <div><img src="./img/Fuentes/Thermaltake 600w.jpg" alt=""></div>
+             <span>Thermaltake 600w</span>
+             <span>42.000$ </span>
+             <button onclick="addToCart(42000,'Thermaltake 600w')">Agregar al carrito</button>
+         </div>
+         
+
+    </div>
+
+    <h2>Gabinetes</h2>
+    <div id="productosGrid">
+       
+        <div id="productos">
+             <div><img src="./img/Gabinetes/Cassiopeia Level up.jpg" alt=""></div>
+             <span>Cassiopeia Level up</span>
+             <span>15.000$</span>
+             <button onclick="addToCart(15000,'Cassiopeia Level up')">Agregar al carrito</button>
+        </div>
+        <div id="productos">
+         <div><img src="./img/Gabinetes/DS Line 1.jpg" alt=""></div>
+            <span>DS Line 1</span>
+            <span>12.000$ </span>
+            <button onclick="addToCart(12000,'DS Line 1')">Agregar al carrito</button>
+         </div>
+         <div id="productos">
+             <div><img src="./img/Gabinetes/Phanteks eclipse p400.jpg" alt=""></div>
+             <span>Phanteks eclipse p400</span>
+             <span>20.000$ </span>
+             <button onclick="addToCart(20000,'Phanteks eclipse p400')">Agregar al carrito</button>
+         </div>
+         <div id="productos">
+             <div><img src="./img/Gabinetes/Phanteks evolv X.jpg" alt=""></div>
+             <span>Phanteks evolv X</span>
+             <span>25.000$ </span>
+             <button onclick="addToCart(25000,'Phanteks evolv X')">Agregar al carrito</button>
+        </div>
+        <div id="productos">
+             <div><img src="./img/Gabinetes/Sentey x10 RGB Glass.jpg" alt=""></div>
+             <span>Sentey x10 RGB Glass</span>
+             <span>23.500$ </span>
+             <button onclick="addToCart(23500,'Sentey x10 RGB Glass')">Agregar al carrito</button>
+         </div>
+         
+
+    </div>
+    
+    <script src="./main.js"></script>
+</body>
+</html>

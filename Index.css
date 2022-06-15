@@ -200,7 +200,26 @@ color: tomato;
     z-index: 0;
 
 }
-
+ #tiendaBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    border: none;
+    border-radius: 25px;
+    background-color: aqua;
+    min-height: 5%;
+    max-height: 20px;
+    margin-top: 10%;
+    font-size: 1rem;
+    
+}
+#tiendaBtn a {
+    font-family: var(--fontfamily);
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+}
 .boxtitulo{
     font-family: var(--fontfamily);
     z-index: 1;  
@@ -398,6 +417,9 @@ color: tomato;
             font-size: 1rem;
            
         } 
+        #tiendaBtn{
+            font-size: 2rem;
+        }
 
 
     .boxgralseccion2 {
