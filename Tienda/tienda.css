@@ -71,6 +71,10 @@ body{
     
     
 }
+#total{
+    display: flex;
+    justify-content: flex-end;
+}
 
 #total ul{
     display: flex;
@@ -80,7 +84,7 @@ body{
     background-color:white;
     list-style-type: none;
     text-align: center;
-    justify-self: flex-start;
+    justify-self: flex-end;
     border-radius: 2px;
     max-width: 100%;
     transform: scaleY(0); 
@@ -98,9 +102,25 @@ body{
     align-items: center;
     transition: 250ms;
     transform: scale(0);
+    border-bottom: 2px solid rgb(0,83,99);
+    width: 100%;
 }
 #total ul li.animate {
     transform: scale(1);
+}
+#finalizarBtn {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--fontfamily);
+    border: none;
+    background-color: blue;
+    font-weight: 600;
+    color: white;
+    border-radius: 2px;
+    padding: 2vh ;
+    align-self: center;
 }
 #imagenCarrito {
     display: flex;
@@ -193,6 +213,6 @@ h2{
     font-weight: 600;
     color: white;
     border-radius: 2px;
-    padding: 2vw;
+    padding: 2vh;
     
 }
