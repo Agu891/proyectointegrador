@@ -10,9 +10,8 @@ const ul = document.createElement('ul')
 
 
 
-function addToCart (precio,nombre , img) {
-    productos.push({precio: precio , nombre: nombre , img : img})
-   
+function addToCart (precio,nombre , img, count) {
+    productos.push({precio: precio , nombre: nombre , img : img , count: count})
     span.innerHTML = productos.length
     shoppingCart.appendChild(span)
     span.style.position = "absolute"
@@ -36,9 +35,9 @@ function addToCart (precio,nombre , img) {
                     
         }
         const precioFinal = document.createElement('p')
-        total.appendChild(precioFinal)
+        ul.appendChild(precioFinal)
         precioFinal.innerHTML =`TOTAL: $${sumaTotal}` 
-        setTimeout(()=> precioFinal.classList.add("animate"), 500)
+        setTimeout(()=> precioFinal.classList.add("animate"), 0)
         
         console.log(sumaTotal)
         ul.classList.remove("animate")
