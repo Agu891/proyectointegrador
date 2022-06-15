@@ -95,10 +95,10 @@ body{
     justify-content: center;
     align-items: center;
     transition: 250ms;
-    transform: scaleY(0);
+    transform: scale(0);
 }
 #total ul li.animate {
-    transform: scaleY(1);
+    transform: scale(1);
 }
 #imagenCarrito {
     display: flex;

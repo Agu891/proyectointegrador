@@ -32,7 +32,7 @@ function addToCart (precio,nombre , img) {
            
             liNombre.innerHTML = productos[i].nombre + `<img id= "imagenCarrito" src ="${productos[i].img}">` + "$" + productos[i].precio 
             setTimeout(()=> ul.classList.add("animate"), i*500)
-            setTimeout(()=> liNombre.classList.add("animate"), i* 200)  
+            setTimeout(()=> liNombre.classList.add("animate"), i*200)  
                     
         }
         const precioFinal = document.createElement('p')
