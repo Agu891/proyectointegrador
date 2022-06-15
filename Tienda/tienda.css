@@ -71,39 +71,52 @@ body{
     
     
 }
-#shoppingCart ul {
+
+#total ul li{
     display: flex;
     justify-content: center;
-    width: 50%;
-    
-}
-#shoppingCart ul li {
+    align-items: center;
     background-color:white;
     list-style-type: none;
     text-align: center;
     justify-self: flex-start;
     border-radius: 2px;
-    max-width: 70%;
-   transform: scaleY(0); 
-   transform-origin: top;
-   transition: 1s;
+    max-width: 100%;
+    transform: scaleY(0); 
+   transform-origin: top;                     
+   transition: 500ms;
    font-family: var(--fontfamily);
    font-weight: 600;
    font-size: 1rem;
-  
 }
-#shoppingCart ul li.animate {
+
+#imagenCarrito {
+    display: flex;
+    width: 20%;
+    justify-self: center;
+    align-self: center;
+
+}
+
+#total ul li.animate {
     
      transform: scaleY(1) ;
    
 }
-
-
-
-#shoppingCartLi {
-    position: absolute;
-    width: 100%;
+#total p{
+    background-color: white;
+    text-align: center;
+    transform: scaleY(0); 
+   transform-origin: top;
+   transition: 1000ms;
+   font-family: var(--fontfamily);
+   font-weight: 600;
 }
+#total p.animate{
+    transform: scaleY(1) ;
+}
+
+
 #productosGrid{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
