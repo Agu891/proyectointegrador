@@ -17,6 +17,7 @@ function addToCart (precio,nombre) {
     shoppingCart.appendChild(span)
     span.style.position = "absolute"
     console.log(productos)
+    
 }
 
   function seeShoppingCart() {
@@ -27,9 +28,7 @@ function see() {
  ul.appendChild(li)
  let sumaTotal = 0
  for( let i = 0; i <productos.length; i++){ 
- li.innerHTML += `${productos[i].Nombre} =
- 
-                 $ ${productos[i].Precio} || `           
+ li.innerHTML += `${productos[i].Nombre} = $ ${productos[i].Precio} || `           
  setTimeout(()=> li.classList.add("animate"), i*500)
  sumaTotal += productos[i].Precio
 } 
