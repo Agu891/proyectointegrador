@@ -5,8 +5,14 @@ const span = document.createElement('span')
 span.innerHTML = ""
 const total = document.querySelector('#total')
 const ul = document.createElement('ul')
+const option = document.querySelector('#option')
 
 
+function seleccionar () {
+  if(option.innerHTML === "Tarjetas de video" ){
+    console.log("hola")
+  }
+}
 
 
 function addToCart (precio,nombre , img, count) {
@@ -43,6 +49,7 @@ function addToCart (precio,nombre , img, count) {
         
         console.log(sumaTotal)
         ul.classList.remove("animate")
+        
        } 
    function unsee() {
     ul.innerHTML = ""
@@ -54,8 +61,6 @@ function addToCart (precio,nombre , img, count) {
   }else{
     see()
   }
-
-  
 
 
 }

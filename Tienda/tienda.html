@@ -9,17 +9,29 @@
 </head>
 <body>
     <nav id="navbarTienda">
-        <span  > <a href="/index.html" >Volver al inicio</a></span>
+        <span  > <a href="/index.html" ><img src="/Img/d542d022d13b431c8d0c4c01195efcaf.png" alt=""></a></span>
+      
         <span id="shoppingCart"><img onclick="seeShoppingCart()" src="./img/cart-shopping-solid.svg" alt="carrito de compras"></span>
     </nav>
+    <div id="divSelector">
+        <select name="" id="selector" >
+            <option id="option" onselect="seleccionar()" value="">Tarjetas de video</option>
+            <option value="">Memorias RAM</option>
+            <option value="">Procesadores</option>
+            <option value="">Motherboards</option>
+            <option value="">Fuentes</option>
+            <option value="">Gabinetes</option>
+        </select>
+    </div>
     <div id="total"></div>
+
     <h2>Tarjetas de video</h2>
     <div id="productosGrid">
        
         <div id="productos">
              <div><img src="./img/Tarjetas de video/rtx 3090.jpg" alt=""></div>
              <span>Gigabyte RTX 3090</span>
-             <span> 400.000$ </span>
+             <span>400.000$</span>
              <button onclick="addToCart(400000, 'Gigabyte RTX 3090','./img/Tarjetas de video/rtx 3090.jpg',0)">Agregar al carrito</button>
         </div>
         <div id="productos">
