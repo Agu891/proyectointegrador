@@ -23,7 +23,7 @@ body {
 #navBar {
     background-color: black;
    display:flex ;
-   justify-content:space-between;
+   justify-content:space-around;
    align-items: center;
     height: 10vh;
     min-height: 80px;
@@ -48,7 +48,6 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    margin-left: 10px;
     margin-bottom: 10px;
     -webkit-user-select: none;
     user-select: none;
@@ -206,12 +205,7 @@ body {
     
     
 }
-#carrito {
-    display: flex;
-    width: 10%;
-    height: 50%;
-    align-items: center;
-}
+
 #carrito i{
     color: white;
 }
@@ -305,6 +299,8 @@ display: flex;
 overflow-x: auto;
  gap: 25px ;
 }
+
+
 
 .boxgralseccion2 #box1seccion2{
     display: flex;
@@ -545,7 +541,13 @@ overflow-x: auto;
     font-family: var(--fontfamily1);
     font-weight: 500;
     border-radius: 3px;
-    
+    transition: 200ms;
+
+}
+
+.boxDestacado .textoDestacado  button:active{
+    transform: scale(0.9);
+  
 }
 
 /*
