@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Hurricane&family=Lobster&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Hurricane&family=Lobster&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Hurricane&family=Lobster&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Orbitron:wght@400;500;600;700&family=Permanent+Marker&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Hurricane&family=Lobster&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Orbitron:wght@400;500;600;700&family=Permanent+Marker&family=Tiro+Devanagari+Hindi:ital@1&display=swap');
 :root{
     --fontfamily: 'Montserrat', sans-serif;
     --margingral: 15px;
     --fontfamily2: 'Permanent Marker', cursive;
     --fontfamilyH1: 'Orbitron' , sans-serif;
+    --fontfamilydestacados : 'Tiro Devanagari Hindi', serif;
 }
 
 
@@ -47,7 +48,7 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    margin-left: 15px;
+    margin-left: 10px;
     margin-bottom: 10px;
     -webkit-user-select: none;
     user-select: none;
@@ -216,7 +217,7 @@ body {
 }
 .boxportada{
     width: 100%;
-    height: 60vh;
+    height: 50vh;
     display: flex;
     padding-top: 25px;
     justify-content: center;
@@ -283,12 +284,9 @@ body {
      font-family: var(--fontfamily1);
      
  }
- .boxseccion2 {
-  background-color: black;
-  border-radius: 15px 15px 0 0;
- }
 
-.seccionbox{
+
+.seccion1Box{
 
     padding-top: 15px;
     display: flex;
@@ -427,59 +425,110 @@ overflow-x: auto;
     border-radius: 20px;
     font-weight: 400;}
 
-
-.boxcontacto{
+.boxgralseccion2 .box4seccion2{
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
+    justify-content: space-between;
+    scroll-snap-align: start;
+    border-radius: 10px;
+    background-image: url(./Img/procesadores.jpg);
+    background-position: center;
+    background-size: 300%;
+    min-width: 200px;
+    height: 25vh;
+    min-height: 25vh;
+    transition: 200ms;
+   
 }
-.boxcontacto p {
+
+.boxgralseccion2 .box4seccion2 .titulos{
+    font-family: var(--fontfamily);
+    text-transform: uppercase;
     font-size: 1rem;
-    font-weight: 700;
-    font-family: var(--fontfamily1);
-    color: #000000;
-}
-.boxcontacto p img {
-    max-width: 30px;
-    margin-right: 15px;
-}
-.sectionContacto{
-    
-    border-bottom: 2px solid aqua;
-    display: flex;
-    flex-direction: column ;
-}
-
-.boxgralfooter{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background: rgb(0,83,99);
-    background: linear-gradient(0deg, rgba(0,83,99,1) 9%, rgba(0,212,255,1) 100%, rgba(0,83,99,1) 100%);
-  
-}
-.redes {
-    display: flex;
-   flex-direction: row;
-   justify-content: space-evenly;
-   width: 100%;
-}
-.redes a img {
-    max-width: 25px;
-}
-
-.redes a {
-    margin: var(--margingral);
-}
-
-.parraforedes p {
-    font-family: var(--fontfamily1);
+    color: white;
+    text-align: start;
     font-weight: 600;
-    font-size: 1rem;
-    text-align: center;
-    color: black;
+    padding: var(--margingral);
+   
+    
 }
 
+.boxgralseccion2 .box4seccion2 p{
+    display: flex;
+    font-family: var(--fontfamily);
+    font-size: 0.8rem;
+    color: white;
+    text-align: start;
+    border-radius: 20px;
+    font-weight: 400;}
+
+
+#seccion2Box {
+    
+    background-color: white;
+    margin-top: 15px;
+    height: 100vh;
+    border-radius: 10px;
+    padding-left: 25px;
+}    
+#seccion2Box h2{
+    padding-top: 30px;
+    padding-left: 25px;
+    text-align: start;
+    color: black;
+    font-family: var(--fontfamilydestacados);
+    font-weight: 600;
+    font-size: 2rem;
+    width: 50%;
+
+}
+
+
+.boxDestacado{
+    display: flex;
+    min-width: 250px;
+    min-height: 200px;
+    border-radius: 5px;
+    scroll-snap-align: start;
+    margin: 15px;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+    align-items: center;
+    
+}
+.imgDestacado {
+    overflow: hidden;
+    width: 70%;
+}
+.imgDestacado img {
+    width: 150%;
+    align-self: center;
+    padding-right: 25%;
+
+    
+}
+
+.boxDestacado .textoDestacado p{
+    padding-top: 15px;
+    font-weight: 500;
+   
+}
+.boxDestacado .textoDestacado span{
+    color: blue;
+    width: 100%;
+    text-align: start;
+}
+.boxDestacado .textoDestacado  button{
+    border: none;
+    background-color: blue;
+    color: white;
+    font-size: 0.8rem;
+    font-family: var(--fontfamily1);
+    font-weight: 500;
+    border-radius: 3px;
+    
+}
 
 /*
 
