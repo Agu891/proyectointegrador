@@ -302,7 +302,7 @@ scroll-snap-type: x mandatory;
 display: flex;
 -webkit-overflow-scrolling: touch;
 overflow-x: auto;
- gap: 35px ;
+ gap: 25px ;
 }
 
 .boxgralseccion2 .box1seccion2{
@@ -473,7 +473,6 @@ overflow-x: auto;
 }    
 #seccion2Box h2{
     padding-top: 30px;
-    padding-left: 25px;
     text-align: start;
     color: black;
     font-family: var(--fontfamilydestacados);
@@ -490,7 +489,7 @@ overflow-x: auto;
     min-height: 200px;
     border-radius: 5px;
     scroll-snap-align: start;
-    margin: 15px;
+    margin: 10px;
     box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
     -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
