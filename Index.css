@@ -218,6 +218,7 @@ body {
 .boxportada{
     width: 100%;
     height: 50vh;
+    min-height: 350px;
     display: flex;
     padding-top: 25px;
     justify-content: center;
@@ -225,7 +226,6 @@ body {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    position: relative;
     border-radius: 0px 0px 10px 10px ;
 
 }
@@ -306,7 +306,7 @@ overflow-x: auto;
  gap: 25px ;
 }
 
-.boxgralseccion2 .box1seccion2{
+.boxgralseccion2 #box1seccion2{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -316,18 +316,18 @@ overflow-x: auto;
     background-position: center;
     background-size: 350%;
     min-width: 200px;
-    height: 25vh;
-    min-height: 25vh;
+    width: 250px;
+    height: 250px;
     transition: 200ms;
     
    
 }
-.boxgralseccion2 .box1seccion2:hover {
-    min-width: 250px;
-    height: 30vh;
+.boxgralseccion2 #box1seccion2:hover {
+    transform: scale(1.05);
+    margin: 5px;
 }
 
-.boxgralseccion2 .box1seccion2 .titulos{
+.boxgralseccion2 #box1seccion2 .titulos{
     font-family: var(--fontfamily);
     text-transform: uppercase;
     font-size: 1rem;
@@ -339,7 +339,7 @@ overflow-x: auto;
     margin-bottom: 15px;
     
 }
-.boxgralseccion2 .box1seccion2 p{
+.boxgralseccion2 #box1seccion2 p{
     display: flex;
     font-family: var(--fontfamily);
     font-size: 0.8rem;
@@ -350,7 +350,7 @@ overflow-x: auto;
   
 }
 
-.boxgralseccion2 .box2seccion2{
+.boxgralseccion2 #box2seccion2{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -360,14 +360,19 @@ overflow-x: auto;
     background-position: center;
     background-size: 300%;
     min-width: 200px;
-    height: 25vh;
-    min-height: 25vh;
+    width: 250px;
+    height: 250px;
     transition: 200ms;
     
    
 }
+.boxgralseccion2 #box2seccion2:hover {
+    transform: scale(1.05);
+    margin: 5px;
+}
 
-.boxgralseccion2 .box2seccion2 .titulos{
+
+.boxgralseccion2 #box2seccion2 .titulos{
     font-family: var(--fontfamily);
     text-transform: uppercase;
     font-size: 1rem;
@@ -378,7 +383,7 @@ overflow-x: auto;
    
     
 }
-.boxgralseccion2 .box2seccion2 p{
+.boxgralseccion2 #box2seccion2 p{
     display: flex;
     font-family: var(--fontfamily);
     font-size: 0.8rem;
@@ -389,7 +394,7 @@ overflow-x: auto;
     
 }
 
-.boxgralseccion2 .box3seccion2{
+.boxgralseccion2 #box3seccion2{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -399,13 +404,18 @@ overflow-x: auto;
     background-position: center;
     background-size: 300%;
     min-width: 200px;
-    height: 25vh;
-    min-height: 25vh;
+    width: 250px;
+    height: 250px;
     transition: 200ms;
-   
+    transform: scale(1);
 }
 
-.boxgralseccion2 .box3seccion2 .titulos{
+.boxgralseccion2 #box3seccion2:hover {
+   transform: scale(1.05);
+   margin: 5px;
+}
+
+.boxgralseccion2 #box3seccion2 .titulos{
     font-family: var(--fontfamily);
     text-transform: uppercase;
     font-size: 1rem;
@@ -417,16 +427,17 @@ overflow-x: auto;
     
 }
 
-.boxgralseccion2 .box3seccion2 p{
+.boxgralseccion2 #box3seccion2 p{
     display: flex;
     font-family: var(--fontfamily);
     font-size: 0.8rem;
     color: white;
     text-align: start;
     border-radius: 20px;
-    font-weight: 400;}
+    font-weight: 400;
+}
 
-.boxgralseccion2 .box4seccion2{
+.boxgralseccion2 #box4seccion2{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -436,13 +447,18 @@ overflow-x: auto;
     background-position: center;
     background-size: 300%;
     min-width: 200px;
-    height: 25vh;
-    min-height: 25vh;
+    width: 250px;
+    height: 250px;
     transition: 200ms;
+    
    
 }
+.boxgralseccion2 #box4seccion2:hover {
+    transform: scale(1.05);
+    margin: 5px;
+}
 
-.boxgralseccion2 .box4seccion2 .titulos{
+.boxgralseccion2 #box4seccion2 .titulos{
     font-family: var(--fontfamily);
     text-transform: uppercase;
     font-size: 1rem;
@@ -454,7 +470,7 @@ overflow-x: auto;
     
 }
 
-.boxgralseccion2 .box4seccion2 p{
+.boxgralseccion2 #box4seccion2 p{
     display: flex;
     font-family: var(--fontfamily);
     font-size: 0.8rem;
@@ -468,7 +484,7 @@ overflow-x: auto;
     
     background-color: white;
     margin-top: 15px;
-    border-radius: 10px;
+    border-radius: 10px 0 0 0;
     padding-left: 35px;
    
 }    
