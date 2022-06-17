@@ -289,6 +289,7 @@ body {
 .seccion1Box{
 
     padding-top: 15px;
+    padding-left: 15px;
     display: flex;
     flex-direction: column;
  
@@ -535,105 +536,4 @@ overflow-x: auto;
 
 @media screen and (min-width: 1024px) {
     
-
-    .navbar{
-        display: flex;
-        width: 100%;
-        justify-content: center;
-
-    }
-    .navbox{
-        width: 100%;
-        max-width: 1000px;
-        
-    }
-
-    #menuToggle{
-        display: flex;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-        position:static;
-        
-     
-        
-    }
-
-    #menuToggle span {
-        display: none;
-    }
-    #menu{
-        display: flex;
-        background: none;
-        justify-content: space-between;
-        align-items: center;
-        transition: none;
-        transform: none;
-        height: 100%;
-        position: static;
-        width: 100%;
-        max-width: 80%;
-        
-        
-    }
-        #menu .menu__item{
-            display: flex;
-            font-size: 1rem;
-           
-        } 
-        #tiendaBtn{
-            font-size: 2rem;
-        }
-
-
-    .boxgralseccion2 {
-            display: flex;
-            flex-direction: row;
-            padding-bottom: 15px;
-            width: 100%;
-        }
-
-        .box1seccion2{
-            width: 25%;
-            height: 30vh;
-            max-width: 300px;
-            margin: 20px 0px;
-        }
-
-
-        .boxtitulo{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .boxtitulo h1 {
-            
-            font-size: 4rem;
-            padding-left:  0px 0px;
-            border-left: 10px  solid aqua;
-        } 
-
-        .boxtitulo p {
-            font-size: 2.5rem;
-        }
-    .seccionbox h2{
-        text-align: center;
-        align-self: center;
-        width: 50%;
-        font-size: 2rem;
-    }
-    .sectionContacto h2 {
-        align-self: center;
-        width: 50%;
-        font-size: 2rem;
-    }
-    .boxcontacto {
-        flex-direction: row;
-        margin: var(--margingral);
-    }
-    .redes a img {
-        max-width: 50px;
-    }
-}
+} */
