@@ -468,7 +468,8 @@ overflow-x: auto;
     background-color: white;
     margin-top: 15px;
     border-radius: 10px;
-    padding-left: 25px;
+    padding-left: 35px;
+   
 }    
 #seccion2Box h2{
     padding-top: 30px;
@@ -522,6 +523,7 @@ overflow-x: auto;
     border: none;
     background-color: blue;
     color: white;
+    padding: 5px;
     font-size: 0.8rem;
     font-family: var(--fontfamily1);
     font-weight: 500;
