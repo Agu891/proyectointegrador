@@ -60,9 +60,15 @@ body {
 
    
 }
+.boxgral p{
+    font-family: var(--fontfamily);
+    text-transform: uppercase;
+    
+}
 .boxgral  h2 {
     font-family: var(--fontfamily);
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    margin-top: 30px;
     
 }
 .boxgral form{
