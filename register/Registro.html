@@ -5,71 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Registro</title>
     <link rel="stylesheet" href="Registro.css">
+    <script src="https://kit.fontawesome.com/b461deaf39.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
     <nav class="navbar">
-        <div class="navbox">
-
-       
-                <div id="menuToggle">
-                <input type="checkbox">
-                    <span></span>    
-                    <span></span>    
-                    <span></span>
-                    <ul class="ul1" id="menu">
-                        <li class="menu__item"><a href="/index.html">Inicio</a></li>
-                        <li class="menu__item"><a href="/index.html">Media</a></li>
-                        <li class="menu__item"><a href="/Loginpage/login.html">Iniciar sesión</a></li>
-                        <li class="menu__item"><a href="/index.html">Contacto</a></li>
-
-                    </ul>
-                </div>
-                <div class="boximg">
-                    <img src="/Img/d542d022d13b431c8d0c4c01195efcaf.png" alt="logo de computadora">
-                </div>
-            
-        </div>
-    </div>
+        <nav id="navBar">
+            <div class="logo">
+               <h1> <a href="/index.html">  PcGeeks</a></h1>
+            </div>
     </nav>
-
+    <form action="">
     <div class="boxgral">
-        <form action="">
-            <div class="boxregistro">
+          
             
-                    <h1>Crear cuenta</h1>
+                    <h2>Crear cuenta</h2>
                     <div class="boxes-input">
                         <label for="nombre">Nombre</label>
-                        <input type="text" name="nombre" id="nombre">
+                        <input type="text" name="nombre" id="nombre" placeholder="ej:. Juan">
                     </div>
                     <div class="boxes-input">
                         <label for="apellido">Apellido</label>
-                        <input type="text" name="apellido" id="apellido">
+                        <input type="text" name="apellido" id="apellido"placeholder="ej:. Rodriguez">
                     </div>
-                    <div class="sexo">
-                        <p>Sexo:</p>
-                        <div class="checkbox">
-                            <label for="Masculino">Masculino</label>
-                            <input type="radio" name="masculino" checked>     
-                            <label for="femenino">Femenino</label>
-                            <input type="radio" name="masculino"  >
-                        </div>
-                    </div>
+        
                     <div class="boxes-input">
                         <label for="email">Email</label>
-                        <input type="email" name="email">
+                        <input type="email" name="email" placeholder="ej:. user@mail.com">
                      </div>
-                    <div class="boxes-input">
-                        <label for="fecha">Fecha de nacimiento</label>
-                        <input type="date" name="fecha">
-                    </div>
-                    <div class="boxes-input">
-                        <label for="direccion">Dirección</label>
-                        <input type="text" name="direccion">
-                    </div>
+            
                     <div class="boxes-input">
                         <label for="nombre">Usuario</label>
-                        <input type="text" name="nombre" id="nombre">
+                        <input type="text" name="nombre" id="nombre" placeholder="ej:. agu891">
                     </div>
                     <div class="boxes-input">
                         <label for="nombre">Contraseña</label>
@@ -79,12 +46,50 @@
                         <label for="nombre">Repita su contraseña</label>
                         <input type="password" name="nombre" id="nombre">
                     </div>
-                    <div class="botonregistro">
+                    
                     <button>Registrarse</button>
-                    </div>
-                    <a href="/Loginpage/login.html">¿Ya tenes cuenta? Inicia sesion</a>
-            </div>
-        </form>
+                    
+                    <a href="/Loginpage/login.html">¿Ya tenes una cuenta? INICIÁ SESIÓN</a>
+            
     </div>
+</form>
+        
+<footer>
+    <div id="footerDiv">
+     <div>
+      <a href="./index.html">Inicio</a>
+      <a href="">Quienes somos</a>
+      <a href="">Preguntas Frecuentes</a>
+      <a href="">Contacto</a>
+     </div>
+     <div>
+      <img src="/Img/Logos marcas/iconos-de-tarjetas-de-credito-psd.webp" alt="">
+      <input type="text" placeholder="Suscribite al newsletter...">
+     </div>
+     <div id="redes">
+        <a href="">Instagram</a>
+        <a href="">Facebook</a>
+        <a href="">Youtube</a>
+        <a href="">Twitter</a>
+        <a href="">Pinterest</a>
+     </div>
+     <div>
+      <div>
+      <i class="fa-brands fa-whatsapp fa-2x"></i> <p> 2216230365</p>
+    </div>
+      <div>
+        <i class="fa-solid fa-phone fa-2x"></i> <p>114556643</p>
+      </div>
+      <div>
+        <i class="fa-solid fa-at fa-2x"></i> <p>pcgeeks@mail.com</p> 
+      </div>
+      <div><i class="fa-solid fa-location-dot fa-2x"></i><p>Juan Bautista Alberdi 2435</p>
+      </div>
+    </div>
+  </div>
+   <p id="derechos">PcGeeks todos los derechos reservados ©</p>
+</footer>
+
+
 </body>
 </html>
