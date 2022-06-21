@@ -258,7 +258,7 @@ display: none;
 }
 #total ul.animate {
     
-    transform:  translate(8%, 5%) ;
+    transform:  translate(8%, 12%) ;
     
 }
 #total ul li{
@@ -950,4 +950,9 @@ overflow-x: auto;
     
    }
 
+   #total ul.animate {
+    
+    transform:  translate(8%, 8%) ;
+    
+}
 } 
