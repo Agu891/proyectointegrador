@@ -26,11 +26,14 @@ body {
    justify-content:space-around;
    align-items: center;
     height: 10vh;
+    width: 100%;
     min-height: 80px;
-    position: relative;
+    position: fixed;
+    z-index:2;
 }
 #logoQuery {
 display: none;
+
 }
 
 .logo h1{
@@ -212,21 +215,120 @@ display: none;
 #carrito i{
     color: white;
 }
+#carrito span {
+    background-color: red;
+    color: white;
+    font-family: var(--fontfamily);
+    border-radius: 15px;
+    width: 18px;
+    text-align: center;
+    font-size: 0.9rem;
+    position:absolute;
+    z-index: 2;
+}
+#total {
+    display: flex;
+    justify-content: flex-end;
+    
+}
+#total ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #212121;
+    list-style-type: none;
+    text-align: center;
+    justify-self: flex-end;
+    border-radius: 2px;
+    max-width: 100vw;
+    transform:  translate(500px) ; 
+   transform-origin: top;                     
+   transition: 500ms;
+   font-family: var(--fontfamily);
+   font-weight: 600;
+   font-size: 1rem;
+   position: absolute;
+   z-index: 1;
+   
+}
+#total ul.animate {
+    
+    transform:  translate(8%,4%) ;
+  
+}
+#total ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 250ms;
+    transform: scale(0);
+    border-bottom: 2px solid rgb(0,83,99);
+    width: 100%;
+    color: white;
+}
+#total ul li.animate {
+    transform: scale(1);
+}
+#finalizarBtn {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--fontfamily);
+    border: none;
+    background-color: blue;
+    font-weight: 600;
+    color: white;
+    border-radius: 2px;
+    padding: 2vh ;
+    align-self: center;
+}
+
+
+
+
+#total p{
+    background-color: #212121;
+    color: white;
+    text-align: center;
+    min-height: 20px;
+    font-size: 1.5rem;
+    transform: scaleY(0); 
+   transform-origin: top;
+   transition: 100ms;
+   font-family: var(--fontfamily);
+   font-weight: 600;
+   position: relative;
+   z-index: 1;
+   width: 100%;
+}
+#total p.animate{
+    transform: scaleY(1) ;
+}
+
+#imagenCarrito {
+    display: flex;
+    width: 20%;
+    max-width: 200px;
+    justify-self: center;
+    align-self: center;
+
+}
 
 /* --------Portada */
 .boxportada{
     height: 50vh;
     min-height: 350px;
-    max-width: ;
     display: flex;
-    padding-top: 25px;
+    padding-top:90px;
     justify-content: center;
     background-image: url(/Loginpage/img/fondoportada.jpg);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     border-radius: 0px 0px 10px 10px ;
-   
+    
 
 }
 
@@ -278,7 +380,25 @@ display: none;
  
 }
 
+#seccion2 {
+    display: flex;
+    flex-direction: column;
+}
 
+ .mostrarBtn {
+    display: flex;
+    background-color: blue;
+    padding: 15px;
+    border: none;
+    color: #ffffff;
+    font-size: 1rem;
+    border-radius: 5px;
+    width: 25%;
+    min-width:150px ;
+    align-self: center;
+    
+    
+ }
 
 
 .boxgralseccion2{
@@ -461,7 +581,7 @@ overflow-x: auto;
     font-weight: 400;}
 
 
-#seccion2Box {
+#destacados {
     
     background-color: white;
     margin-top: 15px;
@@ -469,7 +589,33 @@ overflow-x: auto;
     padding-left: 35px;
    
 }    
-#seccion2Box h2{
+#destacados h2{
+    padding-top: 30px;
+    text-align: start;
+    color: black;
+    font-family: var(--fontfamilydestacados);
+    font-weight: 600;
+    font-size: 2rem;
+    width: 50%;
+
+}
+
+#destacados  button {
+    display: flex;
+    justify-content: center;
+    border: none;
+    
+}
+
+#ofertas {
+    
+    background-color: white;
+    margin-top: 15px;
+    border-radius: 10px 0 0 0;
+    padding-left: 35px;
+   
+}    
+#ofertas h2{
     padding-top: 30px;
     text-align: start;
     color: black;
@@ -481,6 +627,29 @@ overflow-x: auto;
 }
 
 
+
+
+
+
+
+.seccionVentas {
+    display: none;
+    background-color: white;
+    margin-top: 15px;
+    border-radius: 10px 0 0 0;
+    padding-left: 35px;
+   transition: 200ms;
+}    
+.seccionVentas h2{
+    padding-top: 30px;
+    text-align: start;
+    color: black;
+    font-family: var(--fontfamilydestacados);
+    font-weight: 600;
+    font-size: 2rem;
+    width: 50%;
+
+}
 .boxDestacado{
     display: flex;
     min-width: 250px;
@@ -488,7 +657,7 @@ overflow-x: auto;
     border-radius: 5px;
     scroll-snap-align: start;
     margin: 10px;
-    max-width: 500px;
+    max-width: 400px;
     box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
     -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
@@ -496,19 +665,24 @@ overflow-x: auto;
     
     
 }
-.imgDestacado {
+.boxDestacado .imgDestacado {
     overflow: hidden;
     width: 70%;
 }
-.imgDestacado img {
+.boxDestacado .imgDestacado img {
     width: 150%;
     align-self: center;
     padding-right: 25%;
-
+    max-height: 300px;
     
 }
 
-
+.boxDestacado .textoDestacado{
+    display: flex;
+    flex-direction: column;
+    font-family: var(--fontfamily);
+   
+}
 
 .boxDestacado .textoDestacado p{
     padding-top: 15px;
@@ -533,7 +707,14 @@ overflow-x: auto;
 
 
 }
-
+.ofertas p:nth-child(2){
+    text-decoration: line-through;
+}
+.ofertas p:nth-child(3)::after{
+    content: "En un solo pago o";
+    color: blue;
+    padding-left: 5px;
+}
 .boxDestacado .textoDestacado  button:active{
     transform: scale(0.9);
   
@@ -676,6 +857,8 @@ overflow-x: auto;
     padding-top: 15px;
 }
 
+
+
 @media screen and (min-width: 769px) {
 
     .logo h1{
@@ -728,7 +911,20 @@ overflow-x: auto;
    }
    #boxLogos {
     margin-left: 175px;
+    display: flex;
+    justify-content: space-between;
    }
+   #nuestrasMarcas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-template-rows: 1fr;
+    gap: 1rem;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+
+}
    #seccionInfo {
     margin-left: 175px;
     display: flex;
@@ -741,6 +937,7 @@ overflow-x: auto;
    
    .boxgralseccion2{
     justify-content: center;
+    
    }
    #boxLogos{
     display: flex;

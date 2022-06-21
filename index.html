@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="./bootstrap-5.1.3-dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina Principal</title>
     <link rel="stylesheet" href="Index.css">
@@ -20,15 +20,16 @@
                         <ul class="ul1" id="menu"> 
                           <li id="logoQuery">PcGeeks</li>        
                             <li class="menu__item"><a href="./index.html">Inicio</a></li>
-                            <li class="menu__item"><a href=>Monitores</a></li>
+                            <li class="menu__item" onclick="mostrarMonitores()"><a href="#box4seccion2">Monitores</a></li>
+                            <li class="menu__item" onclick="volverDestacados()"><a href="#box4seccion2">Destacados y Ofertas</a></li>
                             <li class="menu__item" id="componentes"><input type="checkbox" id="checkboxComponentes"> Componentes <i class="fa-solid fa-angle-right"></i> 
                               <ul> 
-                                <li>GPUs</li>
-                                <li>Memorias Ram</li>
-                                <li>Procesadores</li>
-                                <li>Motherboards</li>
-                                <li>Fuentes</li>
-                                <li>Gabinetes</li>
+                                <li onclick="mostrarGpus()"><a href="#box4seccion2">GPUs</a></li>
+                                <li onclick="mostrarMemorias()"> <a href="#box4seccion2">Memorias Ram</a> </li>
+                                <li onclick="mostrarProcesadores()"><a href="#box4seccion2">Procesadores</a></li>
+                                <li onclick="mostrarMothers()">   <a href="#box4seccion2">Motherboards</a></li>
+                                <li onclick="mostrarFuentes()"><a href="#box4seccion2">Fuentes</a></li>
+                                <li onclick="mostrarGabinetes()"><a href="#box4seccion2">Gabinetes</a></li>
                               </ul>
                                </li>
                             <li class="menu__item" id="registrarse"><a href="/Loginpage/login.html">Iniciar Sesion</a></li>
@@ -41,9 +42,12 @@
                        <h1>PcGeeks</h1>
                     </div>
                     <div id="carrito">
-                      <i class="fa-solid fa-cart-shopping fa-xl"></i>
+                      <i class="fa-solid fa-cart-shopping fa-xl" onclick="seeShoppingCart()"></i>
+                      <div id="total"></div>
                     </div>
+                    
                      </div>
+                     
         </nav>
         
         <div class="boxportada">
@@ -61,29 +65,30 @@
      
         <div id= "boxSlider" class="boxgralseccion2">
           
-               <div id="box1seccion2" >
+               <div id="box1seccion2" onclick="mostrarMothers()">
                 <h2 class="titulos">Motherboards</h2>
                 <p>Motherboards de alta gama socket AM4 e intel</p>
                </div>
-               <div id="box2seccion2" >
+               <div id="box2seccion2" onclick="mostrarMemorias()" >
                 <h2 class="titulos">Memorias Ram</h2>
                 <p>RAMs ddr4 2666/3000/3200 Mhz</p>
                </div>
-               <div id="box3seccion2" >
+               <div id="box3seccion2" onclick="mostrarGpus()" >
                 <h2 class="titulos">GPUs</h2>
                 <p>GPUs de ultima generacion GeForce RTX y ATI RX</p>
                </div>
-               <div id="box4seccion2" >
+               <div id="box4seccion2" onclick="mostrarProcesadores()">
                 <h2 class="titulos">Procesadores</h2>
                 <p>Procesadores ultima generación AMD e INTEL</p>
                </div>
 
         </div>  
   </section>
-      <section id="seccion2">
-        <div id="seccion2Box">
-          <h2>Productos destacados</h2>
+      <section id="seccion2" >
+        <div id="destacados">
+          <h2>Productos destacados </h2>
           <p>Encontra aca los productos que estan en tendencia</p>
+          
           <div class="boxgralseccion2">
             <div class="boxDestacado">
               <div class="imgDestacado">
@@ -93,7 +98,7 @@
                 <h3>Gigabyte RTX 3090</h3>
                 <p>$300.000,00</p>
                 <span> <b>12</b>  cuotas sin intereses de <b>$25.000</b></span>
-                <button> Agregar al carrito</button>
+                <button onclick="addToCart(280000,'Gigabyte RTX 3090', './Tienda/img/Tarjetas de video/rtx 3090.jpg' )"> Agregar al carrito</button>
               </div>
             </div>
             <div class="boxDestacado">
@@ -102,7 +107,7 @@
               </div>
               <div class="textoDestacado">
                 <h3>Intel i9 11900k</h3>
-                <p>$150.000</p>
+                <p>$150.000,00</p>
                 <span> <b>12</b>  cuotas sin intereses de <b>$12.500</b></span>
                 <button> Agregar al carrito</button>
               </div>
@@ -191,7 +196,582 @@
               </div>
             </div>
           </div>  
+          
         </div>
+        <button onclick="mostrarTienda()" class="mostrarBtn">Ver todos los productos</button>
+
+        <div id="ofertas">
+          <h2>En oferta</h2>
+          <p>Encontra aca los productos con descuento</p>
+          <div class="boxgralseccion2">
+            <div class="boxDestacado">
+              <div class="imgDestacado">
+                <img src="./Tienda/img/Tarjetas de video/rtx 3090.jpg" alt="">
+              </div>
+              <div class="textoDestacado ofertas">
+                <h3>Gigabyte RTX 3090</h3>
+                <p>$300.000,00</p>
+                <p>$280.000,00 </p>
+                <span> <b>12</b>  cuotas sin intereses de <b>$25.000</b></span>
+                <button onclick="addToCart(300000,'Gigabyte RTX 3090', './Tienda/img/Tarjetas de video/rtx 3090.jpg' )"> Agregar al carrito</button>
+              </div>
+            </div>
+            <div class="boxDestacado">
+              <div class="imgDestacado">
+                <img src="./Tienda/img/Microprocesadores/Intel i9 11900k.jpg" alt="">
+              </div>
+              <div class="textoDestacado ofertas">
+                <h3>Intel i9 11900k</h3>
+                <p>$150.000,00</p>
+                <p>$12.000,00 </p>
+                <span> <b>12</b>  cuotas sin intereses de <b>$12.500</b></span>
+                <button> Agregar al carrito</button>
+              </div>
+            </div>
+            <div class="boxDestacado">
+              <div class="imgDestacado">
+                <img src="./Tienda/img/RAMs/Gskill trident z royal.jpg" alt="">
+              </div>
+              <div class="textoDestacado ofertas">
+                <h3>Gskill Trident Z Royal</h3>
+                <p>$80.000,00</p>
+                <p>$70.000,00 </p>
+                <span> <b>12</b>  cuotas sin intereses de <b>$6.600</b></span>
+                <button> Agregar al carrito</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="boxgralseccion2">
+            <div class="boxDestacado">
+              <div class="imgDestacado">
+                <img src="./Tienda/img/Mothers/ASUS crosshair dark hero VIII.jpg" alt="">
+              </div>
+              <div class="textoDestacado ofertas">
+                <h3>ASUS crosshair dark hero VIII</h3>
+                <p>$120.000,00</p>
+                <p>$110.000,00 </p>
+                <span> <b>12</b>  cuotas sin intereses de <b>$10.000</b></span>
+                <button> Agregar al carrito</button>
+              </div>
+            </div>
+            <div class="boxDestacado">
+              <div class="imgDestacado">
+                <img src="./Tienda/img/Microprocesadores/AMD Ryzen 9 5950x.jpg" alt="">
+              </div>
+              <div class="textoDestacado ofertas">
+                <h3>AMD Ryzen 9 5950x</h3>
+                <p>$160.000,00</p>
+                <p>$130.000,00</p>
+                <span> <b>12</b>  cuotas sin intereses de <b>$13.333</b></span>
+                <button> Agregar al carrito</button>
+              </div>
+            </div>
+            <div class="boxDestacado">
+              <div class="imgDestacado">
+                <img src="./Tienda/img/Gabinetes/Phanteks evolv X.jpg" alt="">
+              </div>
+              <div class="textoDestacado ofertas">
+                <h3>Phanteks evolv X</h3>
+                <p>$20.000,00</p>
+                <p>$15.000,00</p>
+                <span> <b>12</b>  cuotas sin intereses de <b>$1.666</b></span>
+                <button> Agregar al carrito</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="boxgralseccion2">
+            <div class="boxDestacado">
+              <div class="imgDestacado">
+                <img src="./Tienda/img/Monitores/Viresonic XG.jpg" alt="">
+              </div>
+              <div class="textoDestacado ofertas">
+                <h3>Viewsonic XG</h3>
+                <p>$130.000,00</p>
+                <p>$120.000,00</p>
+                <span> <b>12</b>  cuotas sin intereses de <b>$10.833</b></span>
+                <button> Agregar al carrito</button>
+              </div>
+            </div>
+            <div class="boxDestacado">
+              <div class="imgDestacado">
+                <img src="./Tienda/img/Monitores/ASUS ROG strix X.jpg" alt="">
+              </div>
+              <div class="textoDestacado ofertas">
+                <h3>ASUS ROG strix X</h3>
+                <p>$150.000,00</p>
+                <p>$130.000,00</p>
+                <span> <b>12</b>  cuotas sin intereses de <b>$12.500</b></span>
+                <button> Agregar al carrito</button>
+              </div>
+            </div>
+            <div class="boxDestacado">
+              <div class="imgDestacado">
+                <img src="./Tienda/img/Monitores/Lg Ultragear FHD.jpg" alt="">
+              </div>
+              <div class="textoDestacado ofertas">
+                <h3>Lg Ultragear FHD</h3>
+                <p>$125.000,00</p>
+                <p>$115.000,00</p>
+                <span> <b>12</b>  cuotas sin intereses de <b>$10.416</b></span>
+                <button> Agregar al carrito</button>
+              </div>
+            </div>
+          </div>  
+        </div>
+
+        <div id="memorias" class="seccionVentas" >
+          <h2>Memorias Ram </h2>
+          <p>Las mejores memorias para tu pc</p>
+         
+          <div class="boxgralseccion2">
+            <div class="boxDestacado">
+              <div class="imgDestacado">
+                <img src="./Tienda/img/RAMs/Corsair Vengeance lfx.jpg" alt="">
+              </div>
+              <div class="textoDestacado">
+                <h3>Corsair Vengeance lfx</h3>
+                <p>$300.000,00</p>
+                <span> <b>12</b>  cuotas sin intereses de <b>$25.000</b></span>
+                <button onclick="addToCart(300000,'Gigabyte RTX 3090', './Tienda/img/Tarjetas de video/rtx 3090.jpg' )"> Agregar al carrito</button>
+              </div>
+            </div>
+            <div class="boxDestacado">
+              <div class="imgDestacado">
+                <img src="./Tienda/img/RAMs/Hyperx Fury 8gb.jpg" alt="">
+              </div>
+              <div class="textoDestacado ">
+                <h3>Hyperx Fury 8gb</h3>
+                <p>$150.000,00</p>
+                <span> <b>12</b>  cuotas sin intereses de <b>$12.500</b></span>
+                <button> Agregar al carrito</button>
+              </div>
+            </div>
+            <div class="boxDestacado">
+              <div class="imgDestacado">
+                <img src="./Tienda/img/RAMs/Gskill trident z royal.jpg" alt="">
+              </div>
+              <div class="textoDestacado ofertas">
+                <h3>Gskill Trident Z Royal</h3>
+                <p>$80.000,00</p>
+                <p>$70.000,00 </p>
+                <span> <b>12</b>  cuotas sin intereses de <b>$6.600</b></span>
+                <button> Agregar al carrito</button>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="boxgralseccion2">
+            <div class="boxDestacado">
+              <div class="imgDestacado">
+                <img src="./Tienda/img/RAMs/Corsair Vengeance lfx.jpg" alt="">
+              </div>
+              <div class="textoDestacado">
+                <h3>Corsair Vengeance lfx</h3>
+                <p>$300.000,00</p>
+                <span> <b>12</b>  cuotas sin intereses de <b>$25.000</b></span>
+                <button onclick="addToCart(300000,'Gigabyte RTX 3090', './Tienda/img/Tarjetas de video/rtx 3090.jpg' )"> Agregar al carrito</button>
+              </div>
+            </div>
+            <div class="boxDestacado">
+              <div class="imgDestacado">
+                <img src="./Tienda/img/RAMs/Hyperx Fury 8gb.jpg" alt="">
+              </div>
+              <div class="textoDestacado ">
+                <h3>Hyperx Fury 8gb</h3>
+                <p>$150.000,00</p>
+                <span> <b>12</b>  cuotas sin intereses de <b>$12.500</b></span>
+                <button> Agregar al carrito</button>
+              </div>
+            </div>
+            
+          </div>
+
+            <div id="motherboards" class="seccionVentas">
+              <h2>Motherboards </h2>
+              <p>Las mejores mothers para tu pc</p>
+             
+              <div class="boxgralseccion2">
+                <div class="boxDestacado">
+                  <div class="imgDestacado">
+                    <img src="./Tienda/img/Mothers/ASUS crosshair dark hero VIII.jpg" alt="">
+                  </div>
+                  <div class="textoDestacado">
+                    <h3>ASUS crosshair dark hero VIII</h3>
+                    <p>$150.000,00</p>
+                    <span> <b>12</b>  cuotas sin intereses de <b>$25.000</b></span>
+                    <button onclick="addToCart(150000,'ASUS crosshair dark hero VIII', './Tienda/img/Mothers/ASUS crosshair dark hero VIII.jpg' )"> Agregar al carrito</button>
+                  </div>
+                </div>
+                <div class="boxDestacado">
+                  <div class="imgDestacado">
+                    <img src="./Tienda/img/Mothers/ASUS TUF gaming b450.jpg" alt="">
+                  </div>
+                  <div class="textoDestacado ">
+                    <h3>ASUS TUF gaming b450</h3>
+                    <p>$100.000,00</p>
+                    <span> <b>12</b>  cuotas sin intereses de <b>$12.500</b></span>
+                    <button onclick="addToCart(100000, 'ASUS TUF gaming b450', './Tienda/img/Mothers/ASUS TUF gaming b450.jpg')"> Agregar al carrito</button>
+                  </div>
+                </div>
+                <div class="boxDestacado">
+                  <div class="imgDestacado">
+                    <img src="./Tienda/img/Mothers/Gigabyte Aorus z690 elite.jpg" alt="">
+                  </div>
+                  <div class="textoDestacado">
+                    <h3>Gigabyte Aorus z690 elite</h3>
+                    <p>$80.000,00</p>
+                    <span> <b>12</b>  cuotas sin intereses de <b>$6.600</b></span>
+                    <button onclick="addToCart(80000, 'Gigabyte Aorus z690 elite', './Tienda/img/Mothers/Gigabyte Aorus z690 elite.jpg')"> Agregar al carrito</button>
+                  </div>
+                </div>
+    
+              </div>
+    
+              <div class="boxgralseccion2">
+                <div class="boxDestacado">
+                  <div class="imgDestacado">
+                    <img src="./Tienda/img/Mothers/Gigabyte b660m gaming x.jpg" alt="">
+                  </div>
+                  <div class="textoDestacado">
+                    <h3>Gigabyte b660m gaming x</h3>
+                    <p>$70.000,00</p>
+                    <span> <b>12</b>  cuotas sin intereses de <b>$25.000</b></span>
+                    <button onclick="addToCart(70000,'Gigabyte b660m gaming x', './Tienda/img/Mothers/Gigabyte b660m gaming x.jpg' )"> Agregar al carrito</button>
+                  </div>
+                </div>
+                <div class="boxDestacado">
+                  <div class="imgDestacado">
+                    <img src="./Tienda/img/Mothers/MSI x570 .jpg" alt="">
+                  </div>
+                  <div class="textoDestacado ">
+                    <h3>MSI x570 </h3>
+                    <p>50.000,00</p>
+                    <span> <b>12</b>  cuotas sin intereses de <b>$12.500</b></span>
+                <button onclick="addToCart(50000, 'MSI x570 ', './Tienda/img/Mothers/MSI x570 .jpg' )"> Agregar al carrito</button>
+                  </div>
+                </div>
+              </div>
+
+              <div id="gabinetes" class="seccionVentas">
+                <h2>Gabinetes </h2>
+                <p>Los gabinetes mas facheritos</p>
+               
+                <div class="boxgralseccion2">
+                  <div class="boxDestacado">
+                    <div class="imgDestacado">
+                      <img src="./Tienda/img/Gabinetes/Cassiopeia Level up.jpg" alt="">
+                    </div>
+                    <div class="textoDestacado">
+                      <h3>Cassiopeia Level up</h3>
+                      <p>$30.000,00</p>
+                      <span> <b>12</b>  cuotas sin intereses de <b>$25.000</b></span>
+                      <button onclick="addToCart(30000,'Cassiopeia Level up', './Tienda/img/Gabinetes/Cassiopeia Level up.jpg' )"> Agregar al carrito</button>
+                    </div>
+                  </div>
+                  <div class="boxDestacado">
+                    <div class="imgDestacado">
+                      <img src="./Tienda/img/Gabinetes/DS Line 1.jpg" alt="">
+                    </div>
+                    <div class="textoDestacado ">
+                      <h3>DS Line 1</h3>
+                      <p>$20.000,00</p>
+                      <span> <b>12</b>  cuotas sin intereses de <b>$12.500</b></span>
+                      <button onclick="addToCart(20000, 'DS Line 1', './Tienda/img/Gabinetes/DS Line 1.jpg')"> Agregar al carrito</button>
+                    </div>
+                  </div>
+                  <div class="boxDestacado">
+                    <div class="imgDestacado">
+                      <img src="./Tienda/img/Gabinetes/Phanteks eclipse p400.jpg" alt="">
+                    </div>
+                    <div class="textoDestacado">
+                      <h3>Phanteks eclipse p400</h3>
+                      <p>$25.000,00</p>
+                      <span> <b>12</b>  cuotas sin intereses de <b>$6.600</b></span>
+                      <button onclick="addToCart(25000, 'Phanteks eclipse p400', './Tienda/img/Gabinetes/Phanteks eclipse p400.jpg')"> Agregar al carrito</button>
+                    </div>
+                  </div>
+      
+                </div>
+      
+                <div class="boxgralseccion2">
+                  <div class="boxDestacado">
+                    <div class="imgDestacado">
+                      <img src="./Tienda/img/Gabinetes/Phanteks evolv X.jpg" alt="">
+                    </div>
+                    <div class="textoDestacado">
+                      <h3>Phanteks evolv X</h3>
+                      <p>$35.000,00</p>
+                      <span> <b>12</b>  cuotas sin intereses de <b>$25.000</b></span>
+                      <button onclick="addToCart(35000,'Phanteks evolv X', './Tienda/img/Gabinetes/Phanteks evolv X.jpg' )"> Agregar al carrito</button>
+                    </div>
+                  </div>
+                  <div class="boxDestacado">
+                    <div class="imgDestacado">
+                      <img src="./Tienda/img/Gabinetes/Sentey x10 RGB Glass.jpg" alt="">
+                    </div>
+                    <div class="textoDestacado ">
+                      <h3>Sentey x10 RGB Glass </h3>
+                      <p>$15.000,00</p>
+                      <span> <b>12</b>  cuotas sin intereses de <b>$12.500</b></span>
+                  <button onclick="addToCart(15000, 'Sentey x10 RGB Glass', './Tienda/img/Gabinetes/Sentey x10 RGB Glass.jpg' )"> Agregar al carrito</button>
+                    </div>
+                  </div>  
+                </div>
+
+
+                <div id="gpus" class="seccionVentas">
+                  <h2>Gpus </h2>
+                  <p>Las graficas mas potentes</p>
+                 
+                  <div class="boxgralseccion2">
+                    <div class="boxDestacado">
+                      <div class="imgDestacado">
+                        <img src="./Tienda/img/Tarjetas de video/rtx 3090.jpg" alt="">
+                      </div>
+                      <div class="textoDestacado">
+                        <h3>Gigabyte RTX 3090</h3>
+                        <p>$300.000,00</p>
+                        <span> <b>12</b>  cuotas sin intereses de <b>$25.000</b></span>
+                        <button onclick="addToCart(300000,'Gigabyte RTX 3090', './Tienda/img/Tarjetas de video/rtx 3090.jpg' )"> Agregar al carrito</button>
+                      </div>
+                    </div>
+                    <div class="boxDestacado">
+                      <div class="imgDestacado">
+                        <img src="./Tienda/img/Tarjetas de video/rtx 3080ti.jpg" alt="">
+                      </div>
+                      <div class="textoDestacado ">
+                        <h3>Suprim RTX 3080ti</h3>
+                        <p>$280.000,00</p>
+                        <span> <b>12</b>  cuotas sin intereses de <b>$12.500</b></span>
+                        <button onclick="addToCart(280000, 'Suprim RTX 3080ti', './Tienda/img/Tarjetas de video/rtx 3080ti.jpg')"> Agregar al carrito</button>
+                      </div>
+                    </div>
+                    <div class="boxDestacado">
+                      <div class="imgDestacado">
+                        <img src="./Tienda/img/Tarjetas de video/rtx 3080.jpg" alt="">
+                      </div>
+                      <div class="textoDestacado">
+                        <h3>Gamerock rtx 3080</h3>
+                        <p>$250.000,00</p>
+                        <span> <b>12</b>  cuotas sin intereses de <b>$6.600</b></span>
+                        <button onclick="addToCart(250000, 'Gamerock rtx 3080', './Tienda/img/Tarjetas de video/rtx 3080.jpg')"> Agregar al carrito</button>
+                      </div>
+                    </div>
+        
+                  </div>
+        
+                  <div class="boxgralseccion2">
+                    <div class="boxDestacado">
+                      <div class="imgDestacado">
+                        <img src="./Tienda/img/Tarjetas de video/rx6900 xt.jpg" alt="">
+                      </div>
+                      <div class="textoDestacado">
+                        <h3>Asus rx6900 xt</h3>
+                        <p>$200.000,00</p>
+                        <span> <b>12</b>  cuotas sin intereses de <b>$25.000</b></span>
+                        <button onclick="addToCart(200000,'Asus rx6900 xt', './Tienda/img/Tarjetas de video/rx6900 xt.jpg' )"> Agregar al carrito</button>
+                      </div>
+                    </div>
+                    <div class="boxDestacado">
+                      <div class="imgDestacado">
+                        <img src="./Tienda/img/Tarjetas de video/rx 6700 xt.jpg" alt="">
+                      </div>
+                      <div class="textoDestacado ">
+                        <h3>Gigabyte rx 6700 xt </h3>
+                        <p>$170.000,00</p>
+                        <span> <b>12</b>  cuotas sin intereses de <b>$12.500</b></span>
+                    <button onclick="addToCart(170000, 'Gigabyte rx 6700 xt', './Tienda/img/Tarjetas de video/rx 6700 xt.jpg' )"> Agregar al carrito</button>
+                      </div>
+                    </div>
+                   
+                  </div>
+
+
+
+                  <div id="procesadores" class="seccionVentas">
+                    <h2>Microprocesadores </h2>
+                    <p>Microprocesadores de alta gama</p>
+                   
+                    <div class="boxgralseccion2">
+                      <div class="boxDestacado">
+                        <div class="imgDestacado">
+                          <img src="./Tienda/img/Microprocesadores/Intel i9 11900k.jpg" alt="">
+                        </div>
+                        <div class="textoDestacado">
+                          <h3>Intel i9 11900k</h3>
+                          <p>$150.000,00</p>
+                          <span> <b>12</b>  cuotas sin intereses de <b>$25.000</b></span>
+                          <button onclick="addToCart(150000,'Intel i9 11900k', './Tienda/img/Microprocesadores/Intel i9 11900k.jpg' )"> Agregar al carrito</button>
+                        </div>
+                      </div>
+                      <div class="boxDestacado">
+                        <div class="imgDestacado">
+                          <img src="./Tienda/img/Microprocesadores/Intel i9 11700.jpg" alt="">
+                        </div>
+                        <div class="textoDestacado ">
+                          <h3>Intel i9 11700</h3>
+                          <p>$120.000,00</p>
+                          <span> <b>12</b>  cuotas sin intereses de <b>$12.500</b></span>
+                          <button onclick="addToCart(120000, 'Intel i9 11700', './Tienda/img/Microprocesadores/Intel i9 11700.jpg')"> Agregar al carrito</button>
+                        </div>
+                      </div>
+                      <div class="boxDestacado">
+                        <div class="imgDestacado">
+                          <img src="./Tienda/img/Microprocesadores/AMD Ryzen 9 5950x.jpg" alt="">
+                        </div>
+                        <div class="textoDestacado">
+                          <h3>AMD Ryzen 9 5950x</h3>
+                          <p>$125.000,00</p>
+                          <span> <b>12</b>  cuotas sin intereses de <b>$6.600</b></span>
+                          <button onclick="addToCart(125000, 'AMD Ryzen 9 5950x', './Tienda/img/Microprocesadores/AMD Ryzen 9 5950x.jpg')"> Agregar al carrito</button>
+                        </div>
+                      </div>
+          
+                    </div>
+          
+                    <div class="boxgralseccion2">
+                      <div class="boxDestacado">
+                        <div class="imgDestacado">
+                          <img src="./Tienda/img/Microprocesadores/AMD Ryzen 7 5800x.jpg" alt="">
+                        </div>
+                        <div class="textoDestacado">
+                          <h3>AMD Ryzen 7 5800x</h3>
+                          <p>$100.00,00</p>
+                          <span> <b>12</b>  cuotas sin intereses de <b>$25.000</b></span>
+                          <button onclick="addToCart(100000,'AMD Ryzen 7 5800x', './Tienda/img/Microprocesadores/AMD Ryzen 7 5800x.jpg' )"> Agregar al carrito</button>
+                        </div>
+                      </div>
+                      <div class="boxDestacado">
+                        <div class="imgDestacado">
+                          <img src="./Tienda/img/Microprocesadores/AMD Ryzen 7 3700x.jpg" alt="">
+                        </div>
+                        <div class="textoDestacado ">
+                          <h3>AMD Ryzen 7 3700x </h3>
+                          <p>$90.000,00</p>
+                          <span> <b>12</b>  cuotas sin intereses de <b>$12.500</b></span>
+                      <button onclick="addToCart(90000, 'AMD Ryzen 7 3700x', './Tienda/img/Microprocesadores/AMD Ryzen 7 3700x.jpg' )"> Agregar al carrito</button>
+                        </div>
+                      </div>
+                     
+                    </div>
+  
+  
+                    <div id="fuentes" class="seccionVentas">
+                      <h2>Fuentes </h2>
+                      <p>Fuentes de ultima generacion</p>
+                     
+                      <div class="boxgralseccion2">
+                        <div class="boxDestacado">
+                          <div class="imgDestacado">
+                            <img src="./Tienda/img/Fuentes/Corsair Tx 850w.jpg" alt="">
+                          </div>
+                          <div class="textoDestacado">
+                            <h3>Corsair Tx 850w</h3>
+                            <p>$50.000,00</p>
+                            <span> <b>12</b>  cuotas sin intereses de <b>$25.000</b></span>
+                            <button onclick="addToCart(500000,'Corsair Tx 850w', './Tienda/img/Fuentes/Corsair Tx 850w.jpg' )"> Agregar al carrito</button>
+                          </div>
+                        </div>
+                        <div class="boxDestacado">
+                          <div class="imgDestacado">
+                            <img src="./Tienda/img/Fuentes/ASUS TUF gaming 750w.jpg" alt="">
+                          </div>
+                          <div class="textoDestacado ">
+                            <h3>ASUS TUF gaming 750w</h3>
+                            <p>$45.000,00</p>
+                            <span> <b>12</b>  cuotas sin intereses de <b>$12.500</b></span>
+                            <button onclick="addToCart(45000, 'ASUS TUF gaming 750w', './Tienda/img/Fuentes/ASUS TUF gaming 750w.jpg')"> Agregar al carrito</button>
+                          </div>
+                        </div>
+                        <div class="boxDestacado">
+                          <div class="imgDestacado">
+                            <img src="./Tienda/img/Fuentes/EVGA 850w gq 80 plus.jpg" alt="">
+                          </div>
+                          <div class="textoDestacado">
+                            <h3>EVGA 850w gq 80 plus</h3>
+                            <p>$40.000,00</p>
+                            <span> <b>12</b>  cuotas sin intereses de <b>$6.600</b></span>
+                            <button onclick="addToCart(40000, 'EVGA 850w gq 80 plus', './Tienda/img/Fuentes/EVGA 850w gq 80 plus.jpg')"> Agregar al carrito</button>
+                          </div>
+                        </div>
+            
+                      </div>
+            
+                      <div class="boxgralseccion2">
+                        <div class="boxDestacado">
+                          <div class="imgDestacado">
+                            <img src="./Tienda/img/Fuentes/Thermaltake 600w.jpg" alt="">
+                          </div>
+                          <div class="textoDestacado">
+                            <h3>Thermaltake 600w</h3>
+                            <p>$30.000,00</p>
+                            <span> <b>12</b>  cuotas sin intereses de <b>$25.000</b></span>
+                            <button onclick="addToCart(30000,'Thermaltake 600w', './Tienda/img/Fuentes/Thermaltake 600w.jpg' )"> Agregar al carrito</button>
+                          </div>
+                        </div>
+                        <div class="boxDestacado">
+                          <div class="imgDestacado">
+                            <img src="./Tienda/img/Fuentes/Deepcool da500w.jpg" alt="">
+                          </div>
+                          <div class="textoDestacado ">
+                            <h3>Deepcool da500w </h3>
+                            <p>$20.000,00</p>
+                            <span> <b>12</b>  cuotas sin intereses de <b>$12.500</b></span>
+                        <button onclick="addToCart(20000, 'Deepcool da500w', './Tienda/img/Fuentes/Deepcool da500w.jpg' )"> Agregar al carrito</button>
+                          </div>
+                        </div>
+                       
+                      </div>
+
+                      <div id="monitores" class="seccionVentas">
+                        <h2>Monitores </h2>
+                        <p>Monitores gaming de baja latencia y altos Hz</p>
+                       
+                        <div class="boxgralseccion2">
+                          <div class="boxDestacado">
+                            <div class="imgDestacado">
+                              <img src="./Tienda/img/Monitores/ASUS ROG strix X.jpg" alt="">
+                            </div>
+                            <div class="textoDestacado">
+                              <h3>ASUS ROG strix X</h3>
+                              <p>$160.000,00</p>
+                              <span> <b>12</b>  cuotas sin intereses de <b>$25.000</b></span>
+                              <button onclick="addToCart(160000,'ASUS ROG strix X', './Tienda/img/Monitores/ASUS ROG strix X.jpg' )"> Agregar al carrito</button>
+                            </div>
+                          </div>
+                          <div class="boxDestacado">
+                            <div class="imgDestacado">
+                              <img src="./Tienda/img/Monitores/Lg Ultragear FHD.jpg" alt="">
+                            </div>
+                            <div class="textoDestacado ">
+                              <h3>Lg Ultragear FHD</h3>
+                              <p>$100.000,00</p>
+                              <span> <b>12</b>  cuotas sin intereses de <b>$12.500</b></span>
+                              <button onclick="addToCart(100000, 'Lg Ultragear FHD', '../Tienda/img/Monitores/Lg Ultragear FHD.jpg')"> Agregar al carrito</button>
+                            </div>
+                          </div>
+                          <div class="boxDestacado">
+                            <div class="imgDestacado">
+                              <img src="./Tienda/img/Monitores/Viresonic XG.jpg" alt="">
+                            </div>
+                            <div class="textoDestacado">
+                              <h3>Viresonic XG</h3>
+                              <p>$90.000,00</p>
+                              <span> <b>12</b>  cuotas sin intereses de <b>$6.600</b></span>
+                              <button onclick="addToCart(90000, 'Viresonic XG', './Tienda/img/Monitores/Viresonic XG.jpg')"> Agregar al carrito</button>
+                            </div>
+                          </div>
+              
+                        </div>
+              
+                        </div>
+  
+                        
+
+
       </section>
     <div id="boxLogos">
         <h2 id="tituloMarcas">Nuestras marcas</h2>
@@ -260,6 +840,6 @@
  <p id="derechos">PcGeeks todos los derechos reservados ©</p>
    </footer>
    
-
+<script src="./main.js"></script>
 </body>
 </html>
