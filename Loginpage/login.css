@@ -104,7 +104,7 @@ body {
     font-weight: 500;
    
 }
-.boxtexto button {
+#loginBtn {
     width:80%;
     height: 8%;
     border-radius: 15px;
@@ -118,8 +118,7 @@ body {
     background: linear-gradient(167deg, rgba(2,210,231,1) 23%, rgba(0,129,255,1) 55%);
 }
 
-
-.boxtexto button:active{
+#loginBtn:active{
   transform: scale(0.9);
 }
 

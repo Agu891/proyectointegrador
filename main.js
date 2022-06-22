@@ -17,6 +17,15 @@ const procesadores = document.querySelector('#procesadores')
 const fuentes = document.querySelector('#fuentes')
 const monitores = document.querySelector('#monitores')
 const seccionVentas = document.querySelector('.seccionVentas')
+const userName = document.querySelector('#userName')
+let nuevoUsuario = sessionStorage.getItem('usuario')
+
+window.onload = function cargarUsuario ()  {
+  if(nuevoUsuario){
+   userName.innerHTML = `<i class="fa-solid fa-user fa-xl"></i> Hola,${nuevoUsuario}`
+  }
+}
+
 
 function mostrarTienda() {
   seccion2.innerHTML = ""
@@ -96,30 +105,35 @@ function mostrarFuentes() {
   
 }
 
-function addToCart (precio,nombre , img) {
-    productos.push({precio: precio , nombre: nombre , img : img })
-    span.innerHTML = productos.length
-    shoppingCart.appendChild(span)
-    console.log(productos)
 
-    
-}
+
 
   function seeShoppingCart() {
     
-    function see() {
-        total.appendChild(ul)
+    const see = () => {
+      total.appendChild(ul)
         let sumaTotal = 0
+       
         for (let i = 0; i<productos.length; i++){
+        
+         //   const btnEliminar = document.createElement('button')
+         //   btnEliminar.innerText = "Eliminar"
+         //   btnEliminar.setAttribute("class" , "btnEliminar")
+         //   btnEliminar.setAttribute("value", `${i+1}`)
+         //   btnEliminar.setAttribute("onclick", "eliminarCarrito()")
+          
             sumaTotal += productos[i].precio
             const liNombre = document.createElement('li')
             ul.appendChild(liNombre)
-           
-            liNombre.innerHTML = productos[i].nombre + `<img id= "imagenCarrito" src ="${productos[i].img}">` + "$" + productos[i].precio 
+            
+            liNombre.innerHTML = productos[i].nombre + `<img id= "imagenCarrito" src ="${productos[i].img}">` + "$" + productos[i].precio
+            //liNombre.appendChild(btnEliminar)
             setTimeout(()=> ul.classList.add("animate"), i*500)
             setTimeout(()=> liNombre.classList.add("animate"), i*200)  
-                    
+
         }
+        
+        
         const precioFinal = document.createElement('p')
 
         ul.appendChild(precioFinal)
@@ -140,9 +154,29 @@ function addToCart (precio,nombre , img) {
     unsee()
   }else{
     see()
+   
   }
 
 
 }
+ 
 
+
+
+function addToCart (precio,nombre , img) {
+  productos.push({precio: precio , nombre: nombre , img : img })
+  span.innerHTML = productos.length
+  shoppingCart.appendChild(span)
+  console.log(productos)
+  let sumaTotal = 0
+
+  if(ul.hasChildNodes()){
+    ul.innerHTML = ""
+    seeShoppingCart()()
+  
+  }
+  
+
+  
+}
 

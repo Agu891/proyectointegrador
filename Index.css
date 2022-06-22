@@ -146,7 +146,7 @@ display: none;
 
 #menu li
 {
-     padding: 10px 0;
+     padding: 5px 0;
      font-size: 1rem;
      color: white;
      font-family: var(--fontfamily);
@@ -155,6 +155,18 @@ display: none;
      width: 100%;
 }
 
+#menu #userName {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-left: 65px;
+    text-align: center;
+    font-family: var(--fontfamilydestacados);
+    font-weight: 400;
+    font-size: 1rem;
+    padding-top: 20px;
+}
 #componentes {
     display: flex;
     justify-content: space-between;
@@ -258,7 +270,7 @@ display: none;
 }
 #total ul.animate {
     
-    transform:  translate(8%, 12%) ;
+    transform:  translate(8%,6%) ;
     
 }
 #total ul li{
@@ -287,6 +299,7 @@ display: none;
     border-radius: 2px;
     padding: 2vh ;
     align-self: center;
+   
 }
 
 
@@ -952,7 +965,7 @@ overflow-x: auto;
 
    #total ul.animate {
     
-    transform:  translate(8%, 8%) ;
+    transform:  translate(8%, 6%) ;
     
 }
 } 
