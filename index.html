@@ -4,7 +4,7 @@
    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina Principal</title>
-    <link rel="stylesheet" href="Index.css">
+    <link rel="stylesheet" href="./styles.css">
     <script src="https://kit.fontawesome.com/b461deaf39.js" crossorigin="anonymous"></script>
 </head>
 
@@ -88,7 +88,7 @@
         </div>  
   </section>
       <section id="seccion2" >
-        <div id="destacados">
+        <div id="destacados" class="seccionVentas" >
           <h2>Productos destacados </h2>
           <p>Encontra aca los productos que estan en tendencia</p>
           
@@ -199,11 +199,11 @@
               </div>
             </div>
           </div>  
-          
+          <button onclick="mostrarTienda()" class="mostrarBtn">Ver todos los productos</button>
         </div>
-        <button onclick="mostrarTienda()" class="mostrarBtn">Ver todos los productos</button>
+        
 
-        <div id="ofertas">
+        <div id="ofertas" class="seccionVentas">
           <h2>En oferta</h2>
           <p>Encontra aca los productos con descuento</p>
           <div class="boxgralseccion2">
@@ -324,7 +324,7 @@
           </div>  
         </div>
 
-        <div id="memorias" class="seccionVentas" >
+        <div id="memorias"  class="seccionVentas" >
           <h2>Memorias Ram </h2>
           <p>Las mejores memorias para tu pc</p>
          
@@ -389,8 +389,9 @@
                 <button> Agregar al carrito</button>
               </div>
             </div>
-            
           </div>
+        </div>
+        
 
             <div id="motherboards" class="seccionVentas">
               <h2>Motherboards </h2>
@@ -457,7 +458,7 @@
                   </div>
                 </div>
               </div>
-
+            </div>
               <div id="gabinetes" class="seccionVentas">
                 <h2>Gabinetes </h2>
                 <p>Los gabinetes mas facheritos</p>
@@ -523,7 +524,7 @@
                     </div>
                   </div>  
                 </div>
-
+              </div>
 
                 <div id="gpus" class="seccionVentas">
                   <h2>Gpus </h2>
@@ -592,7 +593,7 @@
                    
                   </div>
 
-
+                </div>
 
                   <div id="procesadores" class="seccionVentas">
                     <h2>Microprocesadores </h2>
@@ -660,8 +661,8 @@
                       </div>
                      
                     </div>
-  
-  
+                  </div>
+            </div>
                     <div id="fuentes" class="seccionVentas">
                       <h2>Fuentes </h2>
                       <p>Fuentes de ultima generacion</p>
@@ -771,8 +772,8 @@
                         </div>
               
                         </div>
-  
-                        
+                    </div>
+                       
 
 
       </section>
