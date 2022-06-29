@@ -58,7 +58,7 @@ body {
 }
 
 #wrapperContacto #boxContacto {
-  width: 30%;
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -124,6 +124,7 @@ body {
 }
 
 #wrapperContacto form #btnSubmit {
+  cursor: pointer;
   width: 50%;
   padding: 20px;
   border-radius: 15px;

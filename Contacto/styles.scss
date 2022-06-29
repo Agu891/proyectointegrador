@@ -39,11 +39,13 @@ body {
   z-index: 5;
   text-decoration: none;
 }
+
 #wrapperContacto {
   display: flex;
   justify-content: space-between;
+
   #boxContacto {
-    width: 30%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -89,6 +91,7 @@ body {
       margin-bottom: 15px;
     }
     #btnSubmit {
+      cursor: pointer;
       width: 50%;
       padding: 20px;
       border-radius: 15px;

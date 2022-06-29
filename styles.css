@@ -318,10 +318,7 @@ body {
   position: absolute;
   z-index: 1;
   max-height: 500px;
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
-  -webkit-overflow-scrolling: touch;
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 
 #total ul li {
@@ -344,6 +341,7 @@ body {
 }
 
 #total ul li img {
+  margin: 0px 15px 0px 15px;
   width: 25%;
 }
 
@@ -505,6 +503,7 @@ body {
   height: 250px;
   -webkit-transition: 500ms;
   transition: 500ms;
+  cursor: pointer;
 }
 
 .seccion1Box .boxgralseccion2 #box1seccion2 .titulos {
@@ -528,11 +527,12 @@ body {
   display: -ms-flexbox;
   display: flex;
   font-family: var(--fontfamily);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: white;
   text-align: start;
-  border-radius: 20px;
   font-weight: 400;
+  -webkit-backdrop-filter: brightness(30%);
+          backdrop-filter: brightness(30%);
 }
 
 .seccion1Box .boxgralseccion2 #box2seccion2 {
@@ -556,6 +556,7 @@ body {
   height: 250px;
   -webkit-transition: 500ms;
   transition: 500ms;
+  cursor: pointer;
 }
 
 .seccion1Box .boxgralseccion2 #box2seccion2 .titulos {
@@ -573,10 +574,9 @@ body {
   display: -ms-flexbox;
   display: flex;
   font-family: var(--fontfamily);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: white;
   text-align: start;
-  border-radius: 20px;
   font-weight: 400;
 }
 
@@ -607,6 +607,7 @@ body {
   transition: 500ms;
   -webkit-transform: scale(1);
           transform: scale(1);
+  cursor: pointer;
 }
 
 .seccion1Box .boxgralseccion2 #box3seccion2 .titulos {
@@ -624,10 +625,9 @@ body {
   display: -ms-flexbox;
   display: flex;
   font-family: var(--fontfamily);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: white;
   text-align: start;
-  border-radius: 20px;
   font-weight: 400;
 }
 
@@ -656,6 +656,7 @@ body {
   height: 250px;
   -webkit-transition: 500ms;
   transition: 500ms;
+  cursor: pointer;
 }
 
 .seccion1Box .boxgralseccion2 #box4seccion2 .titulos {
@@ -673,10 +674,9 @@ body {
   display: -ms-flexbox;
   display: flex;
   font-family: var(--fontfamily);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: white;
   text-align: start;
-  border-radius: 20px;
   font-weight: 400;
 }
 
@@ -810,6 +810,8 @@ body {
 }
 
 #seccion2 .seccionVentas .boxgralseccion2 .boxDestacado .textoDestacado {
+  padding-left: 5px;
+  margin-right: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -818,6 +820,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   font-family: var(--fontfamily);
+  text-align: center;
 }
 
 #seccion2 .seccionVentas .boxgralseccion2 .boxDestacado .textoDestacado p {
@@ -829,7 +832,6 @@ body {
 #seccion2 .seccionVentas .boxgralseccion2 .boxDestacado .textoDestacado span {
   color: blue;
   width: 100%;
-  text-align: start;
 }
 
 #seccion2 .seccionVentas .boxgralseccion2 .boxDestacado .textoDestacado button {
