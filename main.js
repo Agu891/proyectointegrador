@@ -3,6 +3,7 @@ const shoppingCart = document.querySelector('#carrito');
 const productos = [];
 const span = document.createElement('span');
 span.innerHTML = '';
+const mostrarBtn = document.querySelector('.mostrarBtn');
 const total = document.querySelector('#total');
 const ul = document.createElement('ul');
 const option = document.querySelector('#option');
@@ -19,6 +20,7 @@ const monitores = document.querySelector('#monitores');
 const seccionVentas = document.querySelector('.seccionVentas');
 const userName = document.querySelector('#userName');
 let nuevoUsuario = sessionStorage.getItem('usuario');
+let stock = fetch(stock.json);
 
 window.onload = function cargarUsuario() {
   if (nuevoUsuario) {
@@ -41,7 +43,7 @@ function mostrarTienda() {
   monitores.style.display = 'block';
   gabinetes.style.display = 'block';
   gpus.style.display = 'block';
-  fuentes.style.display = 'block';
+  mostrarBtn.style.display = 'nonef';
 }
 
 function mostrarMonitores() {

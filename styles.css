@@ -23,7 +23,7 @@ body {
 }
 
 #navBar {
-  background-color: #212121;
+  background-color: #303030;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -153,7 +153,7 @@ body {
   position: absolute;
   width: 250px;
   padding: 450px 100px 0px 100px;
-  background-color: #212121;
+  background-color: #303030;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   -webkit-transform-origin: 0% 0%;
@@ -168,7 +168,8 @@ body {
 }
 
 #navBar #menu li {
-  padding: 5px 0;
+  padding-left: 5px;
+  padding-top: 15px;
   font-size: 1rem;
   color: white;
   font-family: var(--fontfamily);
@@ -210,7 +211,7 @@ body {
 }
 
 #navBar #componentes i {
-  padding-left: 10px;
+  margin-left: 5px;
   -webkit-transition: 200ms;
   transition: 200ms;
 }
@@ -231,7 +232,7 @@ body {
 }
 
 #navBar #componentes ul li {
-  background-color: #212121;
+  background-color: #303030;
   position: inherit;
   list-style-type: none;
   font-size: 0.7rem;
@@ -243,6 +244,12 @@ body {
   z-index: 1;
   position: absolute;
   opacity: 0;
+  cursor: pointer;
+}
+
+#navBar #componentes #checkboxComponentes:checked ~ i {
+  -webkit-transform: rotate(90deg) translate(0px, -5px);
+          transform: rotate(90deg) translate(0px, -5px);
 }
 
 #navBar #componentes #checkboxComponentes:checked ~ ul {
@@ -250,9 +257,8 @@ body {
           transform: scaleY(1);
 }
 
-#navBar #componentes #componentes #checkboxComponentes:checked ~ i {
-  -webkit-transform: rotate(90deg) translate(-5px, -5px);
-          transform: rotate(90deg) translate(-5px, -5px);
+#navBar #carrito {
+  cursor: pointer;
 }
 
 #navBar #carrito i {
@@ -689,6 +695,10 @@ body {
   display: none;
 }
 
+#seccion2 #monitores {
+  display: none;
+}
+
 #seccion2 #motherboards {
   display: none;
 }
@@ -739,6 +749,7 @@ body {
   -ms-flex-item-align: center;
       align-self: center;
   font-family: var(--fontfamily);
+  cursor: pointer;
 }
 
 #seccion2 .seccionVentas h2 {
@@ -832,6 +843,7 @@ body {
   border-radius: 3px;
   -webkit-transition: 200ms;
   transition: 200ms;
+  cursor: pointer;
 }
 
 #seccion2 .seccionVentas .boxgralseccion2 .boxDestacado .textoDestacado button:active {

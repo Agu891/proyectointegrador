@@ -68,7 +68,7 @@
      
         <div id= "boxSlider" class="boxgralseccion2">
           
-               <div id="box1seccion2" onclick="mostrarMothers()">
+               <div id="box1seccion2" onclick="mostrarMothers()" >
                 <h2 class="titulos">Motherboards</h2>
                 <p>Motherboards de alta gama socket AM4 e intel</p>
                </div>
@@ -88,6 +88,7 @@
         </div>  
   </section>
       <section id="seccion2" >
+        
         <div id="destacados" class="seccionVentas" >
           <h2>Productos destacados </h2>
           <p>Encontra aca los productos que estan en tendencia</p>
@@ -101,7 +102,7 @@
                 <h3>Gigabyte RTX 3090</h3>
                 <p>$300.000,00</p>
                 <span> <b>12</b>  cuotas sin intereses de <b>$25.000</b></span>
-                <button onclick="addToCart(280000,'Gigabyte RTX 3090', './Tienda/img/Tarjetas de video/rtx 3090.jpg' )"> Agregar al carrito</button>
+                <button onclick="addToCart(300000, 'Gigabyte RTX 3090', './Tienda/img/Tarjetas de video/rtx 3090.jpg')"> Agregar al carrito</button>
               </div>
             </div>
             <div class="boxDestacado">
@@ -322,6 +323,7 @@
               </div>
             </div>
           </div>  
+          <button onclick="mostrarTienda()" class="mostrarBtn">Ver todos los productos</button>
         </div>
 
         <div id="memorias"  class="seccionVentas" >
@@ -390,6 +392,7 @@
               </div>
             </div>
           </div>
+          <button onclick="mostrarTienda()" class="mostrarBtn">Ver todos los productos</button>
         </div>
         
 
@@ -458,6 +461,7 @@
                   </div>
                 </div>
               </div>
+              <button onclick="mostrarTienda()" class="mostrarBtn">Ver todos los productos</button>
             </div>
               <div id="gabinetes" class="seccionVentas">
                 <h2>Gabinetes </h2>
@@ -497,7 +501,7 @@
                       <button onclick="addToCart(25000, 'Phanteks eclipse p400', './Tienda/img/Gabinetes/Phanteks eclipse p400.jpg')"> Agregar al carrito</button>
                     </div>
                   </div>
-      
+                  
                 </div>
       
                 <div class="boxgralseccion2">
@@ -524,6 +528,7 @@
                     </div>
                   </div>  
                 </div>
+                <button onclick="mostrarTienda()" class="mostrarBtn">Ver todos los productos</button>
               </div>
 
                 <div id="gpus" class="seccionVentas">
@@ -592,7 +597,7 @@
                     </div>
                    
                   </div>
-
+                  <button onclick="mostrarTienda()" class="mostrarBtn">Ver todos los productos</button>
                 </div>
 
                   <div id="procesadores" class="seccionVentas">
@@ -661,8 +666,11 @@
                       </div>
                      
                     </div>
+                    <button onclick="mostrarTienda()" class="mostrarBtn">Ver todos los productos</button>
                   </div>
+                
             </div>
+          
                     <div id="fuentes" class="seccionVentas">
                       <h2>Fuentes </h2>
                       <p>Fuentes de ultima generacion</p>
@@ -729,6 +737,8 @@
                         </div>
                        
                       </div>
+                      <button onclick="mostrarTienda()" class="mostrarBtn">Ver todos los productos</button>
+                    </div>
 
                       <div id="monitores" class="seccionVentas">
                         <h2>Monitores </h2>
@@ -768,15 +778,15 @@
                               <button onclick="addToCart(90000, 'Viresonic XG', './Tienda/img/Monitores/Viresonic XG.jpg')"> Agregar al carrito</button>
                             </div>
                           </div>
-              
+                          
                         </div>
-              
-                        </div>
+                        <button onclick="mostrarTienda()" class="mostrarBtn" >Ver todos los productos</button>
+                      </div>
+                        
                     </div>
-                       
-
-
+                   
       </section>
+      
     <div id="boxLogos">
         <h2 id="tituloMarcas">Nuestras marcas</h2>
         <div id="nuestrasMarcas">
