@@ -99,12 +99,6 @@ function seeShoppingCart() {
     let sumaTotal = 0;
 
     for (let i = 0; i < productos.length; i++) {
-      //   const btnEliminar = document.createElement('button')
-      //   btnEliminar.innerText = "Eliminar"
-      //   btnEliminar.setAttribute("class" , "btnEliminar")
-      //   btnEliminar.setAttribute("value", `${i+1}`)
-      //   btnEliminar.setAttribute("onclick", "eliminarCarrito()")
-
       sumaTotal += productos[i].precio;
       const liNombre = document.createElement('li');
       ul.appendChild(liNombre);
@@ -114,7 +108,7 @@ function seeShoppingCart() {
         `<img id= "imagenCarrito" src ="${productos[i].img}">` +
         '$' +
         productos[i].precio;
-      //liNombre.appendChild(btnEliminar)
+
       setTimeout(() => ul.classList.add('animate'), i * 500);
       setTimeout(() => liNombre.classList.add('animate'), i * 200);
     }
@@ -123,7 +117,7 @@ function seeShoppingCart() {
 
     ul.appendChild(precioFinal);
     precioFinal.innerHTML = `TOTAL: $${sumaTotal} 
-                                <button id="finalizarBtn">Finalizar Compra</button> `;
+                                <button id="finalizarBtn" onclick="finalizarCompra()">Finalizar Compra</button> `;
     setTimeout(() => precioFinal.classList.add('animate'), 500);
 
     console.log(sumaTotal);
@@ -151,5 +145,13 @@ function addToCart(precio, nombre, img) {
   if (ul.hasChildNodes()) {
     ul.innerHTML = '';
     seeShoppingCart()();
+  }
+}
+
+function finalizarCompra() {
+  for (let i = 0; i < productos.length; i++) {
+    productos.splice(i);
+    ul.innerHTML = '';
+    span.innerHTML = '';
   }
 }
